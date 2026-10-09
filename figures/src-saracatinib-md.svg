@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" font-family="Arial, Helvetica, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Molecular dynamics of five drug candidates bound to Src kinase</title>
+<desc id="d">Mean interaction energy and ligand RMSD over 100 ns. Saracatinib has the strongest interaction energy, about minus 278 kJ/mol, and the lowest ligand RMSD, 0.25 nm.</desc>
+<rect width="760" height="300" fill="#ffffff"/>
+<text x="170" y="26" font-size="14" font-weight="bold" fill="#18181b">Interaction energy (kJ/mol)</text>
+<text x="170" y="44" font-size="12" fill="#52525b">more negative is stronger binding</text>
+<text x="550" y="26" font-size="14" font-weight="bold" fill="#18181b">Ligand RMSD (nm)</text>
+<text x="550" y="44" font-size="12" fill="#52525b">lower is a more stable pose</text>
+<text x="158" y="76.0" font-size="13" text-anchor="end" fill="#18181b" font-weight="bold">Saracatinib</text>
+<rect x="170" y="58" width="212.9" height="26" rx="3" fill="#1d4ed8"/>
+<text x="388.9" y="76.0" font-size="12" fill="#18181b">-278</text>
+<rect x="550" y="58" width="41.1" height="26" rx="3" fill="#1d4ed8"/>
+<text x="597.1" y="76.0" font-size="12" fill="#18181b">0.25</text>
+<text x="158" y="114.0" font-size="13" text-anchor="end" fill="#18181b" font-weight="normal">BRD4770</text>
+<rect x="170" y="96" width="169.0" height="26" rx="3" fill="#a3aab7"/>
+<text x="345.0" y="114.0" font-size="12" fill="#18181b">-220</text>
+<rect x="550" y="96" width="128.2" height="26" rx="3" fill="#a3aab7"/>
+<text x="684.2" y="114.0" font-size="12" fill="#18181b">0.77</text>
+<text x="158" y="152.0" font-size="13" text-anchor="end" fill="#18181b" font-weight="normal">PF-3274167</text>
+<rect x="170" y="134" width="128.7" height="26" rx="3" fill="#a3aab7"/>
+<text x="304.7" y="152.0" font-size="12" fill="#18181b">-168</text>
+<rect x="550" y="134" width="150.5" height="26" rx="3" fill="#a3aab7"/>
+<text x="706.5" y="152.0" font-size="12" fill="#18181b">0.90</text>
+<text x="158" y="190.0" font-size="13" text-anchor="end" fill="#18181b" font-weight="normal">Abiraterone-acetate</text>
+<rect x="170" y="172" width="110.9" height="26" rx="3" fill="#a3aab7"/>
+<text x="286.9" y="190.0" font-size="12" fill="#18181b">-145</text>
+<rect x="550" y="172" width="98.3" height="26" rx="3" fill="#a3aab7"/>
+<text x="654.3" y="190.0" font-size="12" fill="#18181b">0.59</text>
+<text x="158" y="228.0" font-size="13" text-anchor="end" fill="#18181b" font-weight="normal">PD1-PLD-inhibitor-1</text>
+<rect x="170" y="210" width="109.7" height="26" rx="3" fill="#a3aab7"/>
+<text x="285.7" y="228.0" font-size="12" fill="#18181b">-143</text>
+<rect x="550" y="210" width="181.2" height="26" rx="3" fill="#a3aab7"/>
+<text x="737.2" y="228.0" font-size="12" fill="#18181b">1.09</text>
+<text x="158" y="286" font-size="11" fill="#52525b" text-anchor="start" dx="-150">Means over 100 ns GROMACS simulations of each ligand in complex with Src kinase.</text>
+</svg>
