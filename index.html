@@ -188,6 +188,26 @@ header.nav {
 @media (max-width: 1100px) { .tile-band { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .tile-band { padding: 20px; } .tile .fig-inline { grid-template-columns: 1fr; } }
 
+/* SyntheMol pipeline */
+.pipe { margin: 18px 0 0; }
+.pipe-flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px; align-items: stretch; }
+.pipe-step { position: relative; border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; background: var(--bg); font-size: 0.85rem; color: var(--muted); display: flex; flex-direction: column; gap: 3px; }
+.pipe-step strong { color: var(--text); font-size: 0.95rem; }
+.pipe-k { font-size: 0.74rem; font-weight: bold; color: var(--accent-ink); text-transform: uppercase; letter-spacing: 0.04em; }
+.pipe-step:not(:last-child)::after { content: ""; position: absolute; right: -20px; top: 50%; width: 14px; height: 2px; background: var(--accent-ink); }
+.pipe-step:not(:last-child)::before { content: ""; position: absolute; right: -21px; top: 50%; margin-top: -4px; border: 5px solid transparent; border-left: 7px solid var(--accent-ink); border-right: 0; z-index: 1; }
+.pipe-split { gap: 8px; }
+.pipe-split div { border-top: 1px solid var(--line); padding-top: 7px; display: flex; flex-direction: column; gap: 2px; }
+.pipe-end { background: var(--accent-soft); border-color: transparent; }
+.pipe-loop { margin: 14px 0 0; padding: 11px 14px; border: 1px dashed var(--accent-ink); border-radius: 8px; font-size: 0.88rem; color: var(--muted); }
+.pipe-loop strong { color: var(--accent-ink); margin-right: 8px; }
+.pipe figcaption { color: var(--muted); font-size: 0.82rem; margin-top: 8px; }
+@media (max-width: 900px) {
+  .pipe-flow { grid-template-columns: 1fr; gap: 22px; }
+  .pipe-step:not(:last-child)::after { right: auto; left: 50%; top: auto; bottom: -18px; width: 2px; height: 12px; margin-left: -1px; }
+  .pipe-step:not(:last-child)::before { right: auto; left: 50%; top: auto; bottom: -19px; margin: 0 0 0 -5px; border: 5px solid transparent; border-top: 7px solid var(--accent-ink); border-bottom: 0; }
+}
+
 /* Architecture diagram */
 .arch { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--bg); }
 .arch-flow { display: grid; grid-template-columns: 1fr auto 1.6fr auto 1fr; gap: 10px; align-items: stretch; }
@@ -581,9 +601,40 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
         <div class="tile-text">
           <p class="meta mono"><strong>Greenstone Biosciences</strong> Ongoing</p>
           <h3>Synthesizable design under ADMET constraints</h3>
-          <p>A closed-loop chemistry workflow. SyntheMol proposes molecules that can be made from Enamine REAL building blocks with reaction-aware rules, QSAR and ADMET models score them, and an active learning loop retrains on each round before the next is ranked.</p>
-          <p>Multi-parameter optimization balances potency against BBB permeability and hERG liability. The aim is safe, synthesizable candidates for inflammatory and fibrotic diseases, taken forward with medicinal chemists and external CRO partners.</p>
+          <p>A closed-loop chemistry workflow. SyntheMol proposes molecules that can be made from Enamine REAL building blocks with reaction-aware rules, so every candidate has a synthesis route. Boltz-2 predicts the complex and its binding affinity, molecular dynamics checks whether that complex holds together, and QSAR and ADMET models score potency, BBB permeability and hERG liability.</p>
+          <p>Multi-parameter optimization ranks what survives all of it. Medicinal chemists and external CRO partners then make and test the top candidates, and those results retrain the models before the next round. The aim is safe, active, synthesizable candidates for inflammatory and fibrotic diseases.</p>
         </div>
+        <figure class="pipe" aria-label="The design loop, from building blocks to tested candidates">
+          <ol class="pipe-flow">
+            <li class="pipe-step">
+              <span class="pipe-k">Build from</span>
+              <strong>Enamine REAL</strong>
+              <span>purchasable building blocks and reaction-aware rules</span>
+            </li>
+            <li class="pipe-step">
+              <span class="pipe-k">Generate</span>
+              <strong>SyntheMol</strong>
+              <span>proposes molecules that can actually be made</span>
+            </li>
+            <li class="pipe-step pipe-split">
+              <span class="pipe-k">Score</span>
+              <div><strong>Boltz-2, then MD</strong><span>complex and affinity prediction, then GROMACS or OpenMM for complex stability</span></div>
+              <div><strong>QSAR and ADMET</strong><span>potency, BBB permeability, hERG</span></div>
+            </li>
+            <li class="pipe-step">
+              <span class="pipe-k">Rank</span>
+              <strong>Multi-parameter optimization</strong>
+              <span>balances potency against safety and selects candidates</span>
+            </li>
+            <li class="pipe-step pipe-end">
+              <span class="pipe-k">Make and test</span>
+              <strong>Medicinal chemists and CROs</strong>
+              <span>synthesis and experimental evaluation</span>
+            </li>
+          </ol>
+          <p class="pipe-loop"><strong>Active learning</strong> Experimental results retrain the models before the next round. Candidates that stay safe and active advance for inflammatory and fibrotic diseases.</p>
+          <figcaption>One round of the design loop. Each round starts from what the last round learned.</figcaption>
+        </figure>
       </article>
   </div>
 </section>
