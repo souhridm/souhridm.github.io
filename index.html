@@ -133,42 +133,53 @@ header.nav {
 @media (max-width: 760px) { .facts dl { grid-template-columns: 1fr; row-gap: 8px; } }
 
 /* Areas */
-.areas { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; align-items: start; grid-auto-flow: row dense; }
-.area { background: var(--surface); border-radius: var(--radius); grid-column: span 2; border: 1px solid transparent; transition: border-color 0.15s ease; scroll-margin-top: 80px; }
-.area.wide { grid-column: span 3; }
-.area.feature { background: var(--accent-soft); }
+.areas { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.areas { align-items: start; }
+.area { background: var(--surface); border-radius: var(--radius); grid-column: span 2; border: 1px solid transparent; transition: border-color 0.15s ease; }
 .area:hover { border-color: var(--line); }
-.area[open] { grid-column: 1 / -1; border-color: var(--accent); background: var(--bg); }
-.area summary { list-style: none; cursor: pointer; padding: 26px 28px 22px; display: flex; flex-direction: column; border-radius: var(--radius); }
+.area[open] { border-color: var(--accent); }
+.area summary { list-style: none; cursor: pointer; padding: 28px 28px 22px; display: flex; flex-direction: column; border-radius: var(--radius); }
 .area summary::-webkit-details-marker { display: none; }
-.area summary h3 { margin-bottom: 0.55rem; }
-.area summary p { color: var(--muted); font-size: 0.97rem; margin: 0; max-width: 80ch; }
-.area[open] summary h3 { font-size: 1.4rem; }
-.area .more { font-size: 0.92rem; color: var(--accent-ink); font-weight: bold; margin-top: 0.85rem; }
+.area .more { font-size: 0.92rem; color: var(--accent-ink); font-weight: bold; margin-top: 0.75rem; }
 .area .more::after { content: "Show details +"; }
 .area[open] .more::after { content: "Hide details \2212"; }
-.area .detail { border-top: 1px solid var(--line); margin: 0 28px; padding: 20px 0 28px; }
-.area .detail > ul { margin: 0; padding-left: 1.1rem; max-width: 100ch; }
-.area .detail > ul li { margin-bottom: 0.5rem; }
-.area .tools { margin: 0.75rem 0 0; color: var(--muted); }
+.area .detail { border-top: 1px solid var(--line); margin: 0 28px; padding: 18px 0 26px; }
+.area .detail ul { margin: 0; padding-left: 1.1rem; }
+.area .detail li { margin-bottom: 0.55rem; font-size: 0.97rem; }
+.area.wide { grid-column: span 3; }
+.area.feature { background: var(--accent-soft); }
+.area p { color: var(--muted); font-size: 0.97rem; }
+.area h3 { margin-bottom: 0.6rem; }
+.area .tools { margin: 0; padding-top: 0.25rem; color: var(--text); opacity: 0.85; }
 @media (max-width: 980px) { .area, .area.wide { grid-column: span 3; } }
-@media (max-width: 640px) { .areas { grid-template-columns: 1fr; } .area, .area.wide, .area[open] { grid-column: auto; } .area .detail { margin: 0 20px; } .area summary { padding: 22px 20px 18px; } }
+@media (max-width: 640px) { .areas { grid-template-columns: 1fr; } .area, .area.wide { grid-column: auto; } }
 
-/* Projects inside an open area */
-.proj { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 40px; padding: 32px 0 4px; margin-top: 28px; border-top: 1px solid var(--line); }
-.proj.proj-wide { grid-template-columns: 1fr; }
-.proj:not(:has(.figs)):not(.proj-wide) { grid-template-columns: 1fr; }
-.proj .meta { color: var(--muted); margin: 0 0 6px; }
-.proj .meta strong { color: var(--accent-ink); font-weight: bold; margin-right: 6px; }
-.proj h4 { font-size: 1.3rem; margin: 0 0 0.75rem; letter-spacing: -0.01em; line-height: 1.25; }
-.proj p { max-width: 85ch; }
-.proj .links { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.95rem; }
-.proj figure { margin: 0; }
-.proj figure img, .proj figure video { width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; display: block; }
-.proj figure a { display: block; }
-.proj figure + figure { margin-top: 16px; }
-.proj figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 8px; line-height: 1.45; }
-@media (max-width: 1100px) { .proj { grid-template-columns: 1fr; } .proj .figs { max-width: 560px; } }
+
+/* Selected work tiles */
+.tile { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.tile figure { margin: 0 0 14px; }
+.tile figure img, .tile figure video { width: 100%; height: auto; display: block; border-radius: 6px; background: #fff; }
+.tile figure a { display: block; }
+.tile figcaption { color: var(--muted); font-size: 0.82rem; margin-top: 6px; line-height: 1.4; }
+.tile .meta { color: var(--muted); margin: 0 0 6px; }
+.tile .meta strong { color: var(--accent-ink); font-weight: bold; margin-right: 6px; }
+.tile h3 { font-size: 1.15rem; line-height: 1.25; margin-bottom: 0.6rem; }
+.tile p { font-size: 0.96rem; }
+.tile .links { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.93rem; }
+.tile .tools { color: var(--muted); margin: 0; }
+.tile .fig-inline { display: grid; grid-template-columns: 46% 1fr; gap: 12px; align-items: center; }
+.tile .fig-inline figcaption { margin: 0; }
+.tile-band { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.6fr); gap: 28px; align-items: start; margin-bottom: 16px; background: var(--surface); border-color: transparent; padding: 28px; }
+.tile-band h3 { font-size: 1.35rem; }
+.tile-band figure { margin: 0; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.tile-col { display: grid; gap: 16px; }
+.tile-slim { margin-top: 16px; }
+.tile-slim .tile-text { columns: 2 340px; column-gap: 32px; }
+.tile-slim .tile-text .meta, .tile-slim .tile-text h3 { column-span: all; }
+@media (max-width: 960px) { .tiles { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .tile-band { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .tile-band { padding: 20px; } .tile .fig-inline { grid-template-columns: 1fr; } }
 
 /* Architecture diagram */
 .arch { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--bg); }
@@ -250,6 +261,7 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
     <nav aria-label="Sections">
       <ul>
         <li><a href="#research">Research</a></li>
+        <li><a href="#work">Selected work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -290,282 +302,281 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
 <section id="research">
   <div class="wrap">
     <h2>What I work on</h2>
-    <p class="lede">My work runs from atoms to patients: predictors for drug toxicity and rare disease genetics, simulations of how single mutations and drugs change a protein, omics analysis for target decisions, and the tools that let other scientists use the results. Open an area to see the details and selected projects.</p>
+    <p class="lede">My work runs from atoms to patients. I have built predictors for drug toxicity and rare disease genetics, simulated how single mutations change a protein, analysed single-cell and bulk omics for target decisions, and shipped the pipelines and tools that let other scientists use the results.</p>
 
     <div class="areas">
-
-      <details class="area wide feature" id="area-safety">
+      <details class="area wide feature">
         <summary>
           <h3>Drug safety and ADMET prediction</h3>
-          <p>Machine learning that predicts absorption, distribution, metabolism, excretion and toxicity from structure, including cardiotoxicity.</p>
+          <p>Machine learning that predicts absorption, distribution, metabolism, excretion and toxicity from structure. I co-developed ADMET-AI and led its cardiotoxicity extension, which outperformed common ADMET predictors on FDA drug-induced cardiotoxicity labels.</p>
+          <p class="tools mono">RDKit, scikit-learn, XGBoost, SHAP, hERG, BBB permeability</p>
           <span class="more" aria-hidden="true"></span>
         </summary>
         <div class="detail">
           <ul>
             <li>Co-developed <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11226862/">ADMET-AI</a> (Bioinformatics 2024) with James Zou's group at Stanford, a free platform that predicts 41 ADMET properties fast enough to screen large chemical libraries.</li>
-            <li>Led ADMET-AI DICT for drug-induced cardiotoxicity, published in Circulation 2025.</li>
+            <li>Led ADMET-AI DICT (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11996029/">Circulation 2025</a>). Trained an XGBoost classifier on ADMET-AI predictions for 555 drugs from the FDA DICTRank set, 293 with the most cardiotoxicity concern and 262 with none. It reached a ROC AUC of 0.72 against 0.67 for SwissADME.</li>
+            <li>Explained the model with SHAP. CYP2D6 substrate status, Nrf2 antioxidant response and heat shock factor response were the strongest drivers, and withdrawn drugs share the feature profile of the most-concern group.</li>
             <li>Ran large-scale ADMET reports for medicinal chemistry, including a 2,156-compound combinatorial analogue series across four modification sites.</li>
             <li>In development: a gradient-boosting BBB permeability model, and docking-based hERG and mutagenicity prediction.</li>
           </ul>
-          <p class="tools mono">RDKit, scikit-learn, XGBoost, SHAP, hERG, BBB permeability</p>
-
-          <article class="proj">
-            <div class="proj-text">
-              <p class="meta mono"><strong>Circulation, 2025</strong> First author</p>
-              <h4>Interpretable prediction of drug-induced cardiotoxicity</h4>
-              <p>Cardiotoxicity is a common reason drugs fail late or are withdrawn. I led the conceptualization and deployment of a cardiotoxicity model built on ADMET-AI and trained on 555 drugs from the FDA drug-induced cardiotoxicity (DICTRank) dataset, 293 with the most concern and 262 with none.</p>
-              <p>An XGBoost classifier on ADMET-AI predictions outperformed SwissADME (ROC AUC 0.72 against 0.67). A SHAP analysis shows which properties drive each prediction, led by CYP2D6 substrate status, Nrf2 antioxidant response and heat shock factor response, and withdrawn drugs share the feature profile of the most-concern group.</p>
-              <div class="links">
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11996029/">Circulation paper</a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11226862/">ADMET-AI paper</a>
-                <a href="https://github.com/swansonk14/admet_ai">ADMET-AI code</a>
-              </div>
-            </div>
-            <div class="figs">
-              <figure>
-                <a href="figures/admet-ai-dict-circulation-2025.jpg"><img src="figures/admet-ai-dict-circulation-2025.jpg" width="1247" height="1800" loading="lazy" alt="Figure from the Circulation paper: workflow from 555 DICTRank drugs to ADMET-AI predictions and an XGBoost classifier, ROC and precision-recall curves against SwissADME, SHAP feature importance, a t-SNE map and radar plots for safe, cardiotoxic and withdrawn drugs."></a>
-                <figcaption>ADMET-AI DICT workflow, performance and interpretation. Mukherjee et al., Circulation 2025. Click to enlarge.</figcaption>
-              </figure>
-            </div>
-          </article>
         </div>
       </details>
-
-      <details class="area wide" id="area-design">
+      <details class="area wide">
         <summary>
           <h3>Generative and constrained molecular design</h3>
-          <p>Design loops that propose synthesizable molecules and rank them by potency, selectivity and safety, plus an LLM research assistant for kinase inhibitor discovery.</p>
+          <p>Design loops that generate synthesizable molecules from Enamine REAL building blocks with SyntheMol, then rank them by potency, BBB permeability and safety using QSAR and ADMET models in an active learning cycle.</p>
+          <p class="tools mono">SyntheMol, Enamine REAL, QSAR, MPO, active learning</p>
           <span class="more" aria-hidden="true"></span>
         </summary>
         <div class="detail">
           <ul>
-            <li>Generate candidates from Enamine REAL building blocks with SyntheMol under reaction-aware rules, so every molecule has a plausible synthesis route.</li>
-            <li>Score candidates with QSAR and ADMET models, and use multi-parameter optimization to trade potency against BBB permeability and hERG liability.</li>
-            <li>Built RDKit pipelines for featurization, fingerprinting and SAR modeling, and work with medicinal chemists and external CRO partners to take ranked compounds forward.</li>
+            <li>Built an end-to-end workflow in which SyntheMol proposes molecules from Enamine REAL building blocks under reaction-aware rules, so every candidate has a plausible synthesis route.</li>
+            <li>Scored candidates with QSAR and ADMET models, and used multi-parameter optimization to trade potency against BBB permeability and hERG liability.</li>
+            <li>Closed the loop with active learning: each round of generated hypotheses retrains the models before the next round is ranked.</li>
+            <li>Built RDKit pipelines for featurization, fingerprinting and SAR modeling, and worked with medicinal chemists and external CRO partners to take ranked compounds forward.</li>
           </ul>
-          <p class="tools mono">SyntheMol, Enamine REAL, RDKit, QSAR, MPO, active learning, Qwen, ChEMBL, BindingDB</p>
-
-          <article class="proj">
-            <div class="proj-text">
-              <p class="meta mono"><strong>Greenstone Biosciences</strong> Ongoing</p>
-              <h4>Synthesizable design under ADMET constraints</h4>
-              <p>A closed-loop chemistry workflow. SyntheMol proposes molecules that can be made from Enamine REAL building blocks, QSAR and ADMET models score them, and an active learning loop retrains on each round before the next one is ranked. The aim is safe, synthesizable candidates for inflammatory and fibrotic diseases.</p>
-            </div>
-          </article>
-
-          <article class="proj proj-wide">
-            <div class="proj-text">
-              <p class="meta mono"><strong>Kinase LLM</strong> Ongoing</p>
-              <h4>An LLM research assistant for kinase inhibitor discovery</h4>
-              <p>A locally hosted Qwen model answers kinase drug discovery questions from a human kinase knowledge graph. The graph joins the human kinome tree, measured binding from ChEMBL and BindingDB, profiling panels, structures, clinical evidence, trials, patents and literature.</p>
-              <p>The model acts as a Principal Scientist. It plans each question, sends it to specialist roles that each have their own tools, checks their evidence and writes an answer whose numbered citations open the source rows. The next stage adds Enamine REAL space and multi-parameter optimization to propose new, selective kinase inhibitors that can be made.</p>
-            </div>
-            <figure class="arch" aria-label="Architecture of the kinase research assistant">
-              <div class="arch-flow">
-                <div class="arch-box"><span class="arch-k">Input</span><strong>A research question</strong></div>
-                <span class="arch-arrow" aria-hidden="true"></span>
-                <div class="arch-box arch-main"><span class="arch-k">Plans and reviews</span><strong>Principal Scientist</strong><span>Qwen, hosted locally. Chooses specialists, checks their evidence, writes the answer</span></div>
-                <span class="arch-arrow" aria-hidden="true"></span>
-                <div class="arch-box"><span class="arch-k">Output</span><strong>Answer</strong><span>Numbered citations open the source rows</span></div>
-              </div>
-              <ul class="arch-roles">
-                <li><strong>Systems Biologist</strong>expression, pathways, disease genetics</li>
-                <li><strong>Medicinal Chemist</strong>measured binding and selectivity</li>
-                <li><strong>Clinical Scientist</strong>resistance, clinical evidence, trials</li>
-                <li><strong>Structural Biologist</strong>PDB and KinCore structures</li>
-                <li><strong>Computational Chemist</strong>properties and tautomers</li>
-                <li><strong>PubMed Scholar</strong>reviews and recent papers</li>
-                <li><strong>Patent Analyst</strong>patents and applicants</li>
-                <li><strong>ML Scientist</strong>predicted kinome profiles</li>
-              </ul>
-              <div class="arch-data">
-                <div><strong>Human kinase knowledge graph</strong><span>Kinome tree, ChEMBL, BindingDB, profiling panels, CIViC, HPA expression, pathways, PubMed, trials and patents</span></div>
-                <div><strong>Local structure mirror</strong><span>PDB coordinates, KLIFS pocket maps, KinCore labels, AlphaFold2 models</span></div>
-                <div><strong>Design space</strong><span>Enamine REAL building blocks and multi-parameter optimization</span></div>
-              </div>
-              <figcaption>How a question moves through the assistant. Each specialist only answers from its own tools.</figcaption>
-            </figure>
-          </article>
         </div>
       </details>
-
-      <details class="area" id="area-sim">
+      <details class="area">
         <summary>
           <h3>Molecular simulation and structure</h3>
-          <p>Molecular dynamics of how variants change a protein and how drug candidates bind their targets.</p>
+          <p>Molecular dynamics and free-energy analysis of how variants change a protein and how drug candidates bind their targets, plus docking for off-target and selectivity profiling.</p>
+          <p class="tools mono">OpenMM, GROMACS, NAMD, AutoDock Vina</p>
           <span class="more" aria-hidden="true"></span>
         </summary>
         <div class="detail">
           <ul>
+            <li>Ran the molecular dynamics for the Wu lab's cardiac fibrosis studies (Cell 2024, Nature 2025), simulating how drug candidates bind their protein targets. We validated that saracatinib binds Src kinase more strongly and stably than the other candidates tested.</li>
+            <li>Showed with MD and free-energy analysis that two neighbouring KCNC2 epilepsy variants act in opposite directions, gain and loss of function, before experiments confirmed it (HGG Advances 2022).</li>
             <li>Analyse ligand RMSD, interaction energy, residue flexibility (RMSF) and pocket volume across replicate simulations to rank binders.</li>
             <li>Dock against kinase structures with AutoDock Vina, with tautomer-aware ligand preparation, for off-target and selectivity profiling.</li>
-            <li>First learned molecular dynamics as a summer intern at the Bose Institute in 2012.</li>
           </ul>
-          <p class="tools mono">GROMACS, OpenMM, NAMD, AutoDock Vina, PyMOL</p>
-
-          <article class="proj">
-            <div class="proj-text">
-              <p class="meta mono"><strong>Cell 2024, Nature 2025</strong> Co-author</p>
-              <h4>How anti-fibrotic drug candidates bind their targets</h4>
-              <p>The Wu lab at Stanford screened drugs against cardiac fibrosis in human cell and tissue models. In both studies I ran the molecular dynamics simulations showing how the drug candidates bind their protein targets.</p>
-              <p>In the Nature study we validated that saracatinib binds strongly to Src kinase. Across five candidates over 100 ns, it had the strongest interaction energy and the most stable pose.</p>
-              <div class="links">
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12176515/">Nature paper</a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11645214/">Cell paper</a>
-              </div>
-            </div>
-            <div class="figs">
-              <figure>
-                <a href="figures/nature-2025-fig4h-src-md.jpg"><img src="figures/nature-2025-fig4h-src-md.jpg" width="730" height="594" loading="lazy" alt="Src kinase surface with the starting and ending poses of five drug candidates from molecular dynamics, shown from two angles."></a>
-                <figcaption>Starting and ending poses of five candidates in Src kinase over 100 ns. Cho et al., Nature 2025, Figure 4h.</figcaption>
-              </figure>
-              <figure>
-                <a href="figures/src-saracatinib-md-barplot.jpg"><img src="figures/src-saracatinib-md-barplot.jpg" width="1966" height="1464" loading="lazy" alt="Bar plots of mean interaction energy and ligand RMSD for five candidates bound to Src kinase. Saracatinib has the strongest interaction energy, about minus 278 kJ/mol, and the lowest ligand RMSD, about 0.25 nm."></a>
-                <figcaption>Mean interaction energy and ligand RMSD per candidate, from my Src simulations.</figcaption>
-              </figure>
-            </div>
-          </article>
-
-          <article class="proj">
-            <div class="proj-text">
-              <p class="meta mono"><strong>HGG Advances, 2022</strong> First author</p>
-              <h4>Personalized structural biology for epilepsy variants</h4>
-              <p>Two de novo variants two residues apart in the KCNC2 (Kv3.2) potassium channel caused different forms of developmental epileptic encephalopathy. Using molecular dynamics and free-energy analysis, I showed that V471L acts as gain of function and V469L as loss of function, because V469L constricts the pore and raises the barrier for potassium ions.</p>
-              <p>I led the investigation across clinicians, biochemists and electrophysiologists, and their experiments later confirmed both predictions.</p>
-              <div class="links">
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">HGG Advances paper</a>
-              </div>
-            </div>
-            <div class="figs">
-              <figure>
-                <a href="figures/kcnc2-structure-panels-ab.jpg"><img src="figures/kcnc2-structure-panels-ab.jpg" width="656" height="456" loading="lazy" alt="Structural model of the Kv3.2 channel tetramer with the membrane boundaries, the channel pore, and a close-up of residues V469 and V471 in the PVP motif of helix S6."></a>
-                <figcaption>V469 and V471 sit in the PVP motif lining the channel pore.</figcaption>
-              </figure>
-              <figure>
-                <a href="figures/kcnc2-pore-panel-d.jpg"><img src="figures/kcnc2-pore-panel-d.jpg" width="334" height="285" loading="lazy" alt="Pore surface from simulation and a plot of pore radius along the channel axis for wild type, V469L and V471L. V469L narrows the pore near residue 469."></a>
-                <figcaption>Pore radius along the channel in simulation. Mukherjee et al., HGG Advances 2022 (CC BY-NC-ND).</figcaption>
-              </figure>
-            </div>
-          </article>
         </div>
       </details>
-
-      <details class="area" id="area-genetics">
+      <details class="area">
         <summary>
           <h3>Human genetics and rare disease</h3>
-          <p>Variant interpretation and gene-pair prediction for undiagnosed patients, and genome pipelines for iPSC biobanks.</p>
+          <p>Variant interpretation and gene-pair prediction for undiagnosed patients, built with clinicians in the Undiagnosed Diseases Network.</p>
+          <p class="tools mono">Random forests, GATK4, VEP, WGS</p>
           <span class="more" aria-hidden="true"></span>
         </summary>
         <div class="detail">
           <ul>
+            <li>Built DiGePred (AJHG 2021), a random forest that predicts digenic disease gene pairs, and applied it to 100+ undiagnosed patients and several rare disease cohorts.</li>
             <li>Contributed to identifying a new candidate gene pair for Mayer-Rokitansky-Küster-Hauser syndrome (Human Genetics 2021).</li>
+            <li>Used patient-specific structural modeling to explain why two KCNC2 variants two residues apart cause different epilepsy phenotypes.</li>
             <li>Built the genome analysis pipeline for the Stanford Cardiovascular Institute iPSC biobank: sample identity, data quality, genetic ancestry and pathogenic variant annotation.</li>
             <li>Built a SLURM whole-genome sequencing pipeline with multi-lane input, GATK4 joint genotyping, VEP annotation, separate 30x and low-coverage CNV branches, and resume after failure.</li>
           </ul>
-          <p class="tools mono">Random forests, GATK4, VEP, WGS, SLURM</p>
-
-          <article class="proj">
-            <div class="proj-text">
-              <p class="meta mono"><strong>AJHG, 2021</strong> First author</p>
-              <h4>Finding digenic disease genes with machine learning</h4>
-              <p>Some rare diseases are caused by variants in two genes acting together, which single-gene analysis misses. I built DiGePred, a random forest that predicts digenic disease gene pairs.</p>
-              <p>False positives were checked on gene pairs from 38 unaffected relatives and true positives on 13 new digenic pairs from the literature. With the Undiagnosed Diseases Network it was applied to 100+ undiagnosed patients and several rare disease cohorts.</p>
-              <div class="links">
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8546038/">AJHG paper</a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">MRKH follow-up</a>
-              </div>
-            </div>
-            <div class="figs">
-              <figure>
-                <a href="figures/digepred-workflow.jpg"><img src="figures/digepred-workflow.jpg" width="508" height="500" loading="lazy" alt="DiGePred workflow: digenic and non-digenic gene pairs split into training, validation and held-out test sets, a random forest trained with 10-fold cross validation, and evaluation of false positives on 38 unaffected relatives and true positives on 13 new digenic pairs from the literature."></a>
-                <figcaption>DiGePred training and evaluation. Mukherjee et al., AJHG 2021.</figcaption>
-              </figure>
-            </div>
-          </article>
         </div>
       </details>
-
-      <details class="area" id="area-omics">
+      <details class="area">
         <summary>
-          <h3>Multi-omics and target discovery</h3>
-          <p>Bulk and single-cell RNA-seq, proteomics and phenotypic data, used to find targets and the drugs that act on them.</p>
+          <h3>Multi-omics and target assessment</h3>
+          <p>Bulk and single-cell RNA-seq, proteomics and phenotypic data from human iPSC models and patient tissue, used to judge whether a target is worth pursuing.</p>
+          <p class="tools mono">DESeq2, Scanpy, Seurat, pseudobulk</p>
           <span class="more" aria-hidden="true"></span>
         </summary>
         <div class="detail">
           <ul>
+            <li>Build models of drug response and toxicity that combine whole-genome sequencing, transcriptomics and functional readouts from human iPSC-derived cardiomyocytes, and link those phenotypes to clinical endpoints.</li>
             <li>Integrate RNA-seq, proteomics and phenotypic assays for biomarker discovery, and built a target identification platform that clusters and visualizes public and proprietary multi-omics data.</li>
-            <li>Assess targets from single-cell and bulk cohorts with pseudobulk DESeq2, donor-level summaries and FDR control, so a decision rests on donors rather than on cell counts.</li>
+            <li>Assess targets from public single-cell and bulk cohorts with pseudobulk DESeq2, donor-level summaries and FDR control, so a decision rests on donors rather than on cell counts.</li>
             <li>Built a drug repurposing console for rheumatoid arthritis focused on fibroblast-like synoviocytes, with a proteomics layer from 13 PRIDE datasets and gene-level lookup across about 3,256 papers.</li>
           </ul>
-          <p class="tools mono">DESeq2, Scanpy, Seurat, pseudobulk, meta-analysis, LINCS</p>
-
-          <article class="proj">
-            <div class="proj-text">
-              <p class="meta mono"><strong>AI-driven fibrosis drug discovery</strong> Ongoing</p>
-              <h4>A human pan-fibrosis atlas for targets and drugs</h4>
-              <p>Fibrosis drives organ failure in the lung, liver, kidney, skin, heart, gut and pancreas. I am analysing public human RNA-seq datasets organ by organ, pooling effect sizes across studies to find the program the organs share and the protein targets behind it.</p>
-              <p>LINCS perturbation signatures and other approaches then rank drugs that reverse the fibrotic signature. Rankings will be benchmarked on known antifibrotics such as nintedanib and pirfenidone before they are trusted.</p>
-            </div>
-            <div class="figs">
-              <figure>
-                <a href="figures/fibrosis-forest-plot.svg"><img src="figures/fibrosis-forest-plot.svg" width="640" height="420" loading="lazy" alt="Forest plot of one candidate gene across 13 public fibrosis cohorts. Every cohort shows higher expression in fibrotic tissue than controls, and the pooled effect size is about 1.9."></a>
-                <figcaption>Example meta-analysis for one candidate gene. Gene and study names are withheld while the work is in progress.</figcaption>
-              </figure>
-            </div>
-          </article>
         </div>
       </details>
-
-      <details class="area wide" id="area-software">
+      <details class="area wide">
         <summary>
           <h3>Research software and data platforms</h3>
-          <p>Pipelines, dashboards and research platforms that other scientists use directly.</p>
+          <p>Pipelines and tools that other scientists use directly: a SLURM whole-genome sequencing pipeline, Streamlit dashboards, interactive analysis consoles, and a tested, modular research platform that pairs LLMs with PubMed, GEO, ChEMBL, ClinVar and ClinicalTrials.gov.</p>
+          <p class="tools mono">Python, R, SQL, FastAPI, PostgreSQL, Streamlit, HPC</p>
           <span class="more" aria-hidden="true"></span>
         </summary>
         <div class="detail">
           <ul>
-            <li>Built a modular research platform for rare disease questions in Python, FastAPI and PostgreSQL. A seven-stage pipeline covers entity resolution, intent classification, research planning, evidence retrieval from PubMed, GEO, ClinicalTrials.gov, ChEMBL, ClinVar and Reactome, relevance ranking, structured extraction and weighted-vote aggregation.</li>
+            <li>Built a modular research platform for rare disease questions in Python, FastAPI and PostgreSQL. A seven-stage pipeline covers entity resolution, intent classification, research planning, evidence retrieval, relevance ranking, structured extraction and weighted-vote aggregation.</li>
             <li>Kept the LLM to the steps that need language understanding. Planning, ranking and aggregation are deterministic code, and 77 tests run against a fake LLM client with no network access.</li>
-            <li>Built a high-throughput computational drug discovery platform covering screening, optimization and molecular dynamics of drug binding, and a focused knowledge graph of known and predicted drug-disease relationships.</li>
-            <li>Ship Streamlit dashboards and browser-based consoles so colleagues can explore results without running code, and run pipelines on HPC with SLURM.</li>
+            <li>Ship Streamlit dashboards and browser-based consoles so colleagues can explore results without running code.</li>
+            <li>Run pipelines on HPC with SLURM, with Git and reproducible environments throughout.</li>
           </ul>
-          <p class="tools mono">Python, R, SQL, FastAPI, PostgreSQL, Pydantic, Streamlit, Kuzu, SLURM, Git</p>
         </div>
       </details>
-
-      <details class="area wide" id="area-models">
+      <details class="area wide">
         <summary>
           <h3>Human-relevant models and wet-lab experience</h3>
-          <p>iPSC-derived cardiomyocytes and neural cells, calcium imaging analysis, and a start in protein biochemistry at the bench.</p>
+          <p>I started at the bench with sarcomeric protein biochemistry for cardiomyopathy mutations, and more recently led a team on a project with a non-profit patient foundation, culturing patient-derived iPSC neural progenitors and astrocytes. I also co-wrote a JCI review on moving safety testing beyond animal models.</p>
+          <p class="tools mono">iPSC culture, protein biochemistry, NAMs, FDA Modernization Act 2.0</p>
           <span class="more" aria-hidden="true"></span>
         </summary>
         <div class="detail">
           <ul>
             <li>Led a team on a contract research project for a non-profit patient foundation, modelling Alexander disease in patient-derived iPSC lines. I did the differentiation into neural progenitors and astrocytes, the culture and the imaging.</li>
-            <li>At inStem and NCBS in Bengaluru, purified sarcomeric proteins, reconstituted cardiac thin filaments in vitro and ran functional assays on tropomyosin and troponin T mutations, predicting which domains lean toward hypertrophic or dilated cardiomyopathy (PNAS 2017).</li>
+            <li>At inStem and NCBS in Bengaluru, purified sarcomeric proteins, reconstituted filaments in vitro and ran functional assays on tropomyosin and troponin T mutations, predicting which domains lean toward hypertrophic or dilated cardiomyopathy (PNAS 2017).</li>
             <li>Earlier training in the Stem Cell Facility at AIIMS New Delhi and the Tissue Engineering Group at IIT Delhi.</li>
             <li>Co-wrote the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10617761/">JCI 2023 review</a> on the FDA Modernization Act 2.0 and how human cells, organoids and AI/ML can replace animal models in safety testing.</li>
           </ul>
-          <p class="tools mono">iPSC culture, calcium imaging, Python, Streamlit, protein biochemistry, NAMs</p>
-
-          <article class="proj">
-            <div class="proj-text">
-              <p class="meta mono"><strong>iPSC-CM data analysis</strong> Ongoing</p>
-              <h4>Calcium imaging analysis for iPSC cardiomyocytes</h4>
-              <p>A Python pipeline for calcium optical imaging of iPSC-derived cardiomyocyte organoids and monolayers in 96-well plates. It segments each organoid in the field, extracts its calcium transient, and measures beat rate, amplitude, transient duration (CaTD50, CaTD80, CaTD90), upstroke and decay kinetics, beat-to-beat variability and synchrony.</p>
-              <p>Drug responses are normalised to vehicle wells, so arrhythmia and line-to-line differences show up per plate. It reads two microscope formats, including 100 fps recordings with light-source flicker removed, and an interactive plate explorer and Streamlit app let biologists review every well.</p>
-            </div>
-            <div class="figs">
-              <figure>
-                <video src="figures/ipsc-cm-calcium-imaging.mp4" poster="figures/ipsc-cm-calcium-imaging-poster.jpg" width="604" height="318" autoplay muted loop playsinline preload="metadata" aria-label="Calcium imaging of seven beating cardiac organoids, each outlined and numbered, with its calcium trace and beat rate beside the field."></video>
-                <figcaption>Seven organoids in one field. Each is segmented, coloured by its calcium level, and traced on the right. Shown at half speed.</figcaption>
-              </figure>
-            </div>
-          </article>
         </div>
       </details>
-
     </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="lede">Published projects and work in progress. Figures open full size when clicked.</p>
+
+    <article class="tile tile-band">
+      <div class="tile-text">
+        <p class="meta mono"><strong>Kinase LLM</strong> Ongoing</p>
+        <h3>An LLM research assistant for kinase inhibitor discovery</h3>
+        <p>A locally hosted Qwen model answers kinase drug discovery questions from a human kinase knowledge graph. The graph joins the human kinome tree, measured binding from ChEMBL and BindingDB, profiling panels, structures, clinical evidence, trials, patents and literature.</p>
+        <p>The model acts as a Principal Scientist. It plans each question, sends it to specialist roles that each have their own tools, checks their evidence and writes an answer whose numbered citations open the source rows.</p>
+        <p>The next stage adds Enamine REAL space and multi-parameter optimization to propose new, selective kinase inhibitors that can actually be made.</p>
+        <p class="tools mono">Qwen, Ollama, Kuzu, FastAPI, RDKit, ChEMBL, BindingDB, KLIFS, Enamine REAL</p>
+      </div>
+      <figure class="arch" aria-label="Architecture of the kinase research assistant">
+        <div class="arch-flow">
+          <div class="arch-box"><span class="arch-k">Input</span><strong>A research question</strong></div>
+          <span class="arch-arrow" aria-hidden="true"></span>
+          <div class="arch-box arch-main"><span class="arch-k">Plans and reviews</span><strong>Principal Scientist</strong><span>Qwen, hosted locally. Chooses specialists, checks their evidence, writes the answer</span></div>
+          <span class="arch-arrow" aria-hidden="true"></span>
+          <div class="arch-box"><span class="arch-k">Output</span><strong>Answer</strong><span>Numbered citations open the source rows</span></div>
+        </div>
+        <ul class="arch-roles">
+          <li><strong>Systems Biologist</strong>expression, pathways, disease genetics</li>
+          <li><strong>Medicinal Chemist</strong>measured binding and selectivity</li>
+          <li><strong>Clinical Scientist</strong>resistance, clinical evidence, trials</li>
+          <li><strong>Structural Biologist</strong>PDB and KinCore structures</li>
+          <li><strong>Computational Chemist</strong>properties and tautomers</li>
+          <li><strong>PubMed Scholar</strong>reviews and recent papers</li>
+          <li><strong>Patent Analyst</strong>patents and applicants</li>
+          <li><strong>ML Scientist</strong>predicted kinome profiles</li>
+        </ul>
+        <div class="arch-data">
+          <div><strong>Human kinase knowledge graph</strong><span>Kinome tree, ChEMBL, BindingDB, profiling panels, CIViC, HPA expression, pathways, PubMed, trials and patents</span></div>
+          <div><strong>Local structure mirror</strong><span>PDB coordinates, KLIFS pocket maps, KinCore labels, AlphaFold2 models</span></div>
+          <div><strong>Design space</strong><span>Enamine REAL building blocks and multi-parameter optimization</span></div>
+        </div>
+        <figcaption>How a question moves through the assistant. Each specialist only answers from its own tools.</figcaption>
+      </figure>
+    </article>
+
+    <div class="tiles">
+      <div class="tile-col">
+      <article class="tile">
+        <figure>
+          <a href="figures/admet-ai-dict-circulation-2025.jpg"><img src="figures/admet-ai-dict-circulation-2025.jpg" width="1247" height="1800" loading="lazy" alt="Figure from the Circulation paper: workflow from 555 DICTRank drugs to ADMET-AI predictions and an XGBoost classifier, ROC and precision-recall curves against SwissADME, SHAP feature importance, a t-SNE map and radar plots for safe, cardiotoxic and withdrawn drugs."></a>
+          <figcaption>ADMET-AI DICT workflow, performance and interpretation. Mukherjee et al., Circulation 2025.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>Circulation 2025</strong> First author</p>
+          <h3>Interpretable prediction of drug-induced cardiotoxicity</h3>
+          <p>Cardiotoxicity is a common reason drugs fail late or are withdrawn. I led the conceptualization and deployment of a model built on ADMET-AI and trained on 555 drugs from the FDA DICTRank dataset, 293 with the most cardiotoxicity concern and 262 with none.</p>
+          <p>An XGBoost classifier on ADMET-AI predictions outperformed SwissADME (ROC AUC 0.72 against 0.67). SHAP analysis shows which properties drive each prediction, led by CYP2D6 substrate status, Nrf2 antioxidant response and heat shock factor response. Withdrawn drugs share the feature profile of the most-concern group.</p>
+          <p>The underlying platform, ADMET-AI (Bioinformatics 2024), predicts 41 ADMET properties and is a collaboration between Greenstone Biosciences and James Zou's group at Stanford.</p>
+          <div class="links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11996029/">Circulation paper</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11226862/">ADMET-AI paper</a>
+            <a href="https://github.com/swansonk14/admet_ai">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="tile">
+        <figure>
+          <a href="figures/fibrosis-forest-plot.svg"><img src="figures/fibrosis-forest-plot.svg" width="640" height="420" loading="lazy" alt="Forest plot of one candidate gene across 13 public fibrosis cohorts. Every cohort shows higher expression in fibrotic tissue than controls, and the pooled effect size is about 1.9."></a>
+          <figcaption>Example meta-analysis for one candidate gene. Gene and study names are withheld while the work is in progress.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>AI-driven fibrosis drug discovery</strong> Ongoing</p>
+          <h3>A human pan-fibrosis atlas for targets and drugs</h3>
+          <p>Fibrosis drives organ failure in the lung, liver, kidney, skin, heart, gut and pancreas. I am analysing public human RNA-seq datasets organ by organ and pooling effect sizes across studies, to find the program the organs share and the protein targets behind it.</p>
+          <p>LINCS perturbation signatures and other approaches then rank drugs that reverse the fibrotic signature. Rankings will be benchmarked on known antifibrotics such as nintedanib and pirfenidone before they are trusted.</p>
+        </div>
+      </article>
+      </div>
+      <div class="tile-col">
+      <article class="tile">
+        <figure>
+          <a href="figures/nature-2025-fig4h-src-md.jpg"><img src="figures/nature-2025-fig4h-src-md.jpg" width="730" height="594" loading="lazy" alt="Src kinase surface with the starting and ending poses of five drug candidates from molecular dynamics, shown from two angles."></a>
+          <figcaption>Starting and ending poses of five candidates in Src kinase over 100 ns. Cho et al., Nature 2025, Figure 4h.</figcaption>
+        </figure>
+        <figure>
+          <a href="figures/src-saracatinib-md-barplot.jpg"><img src="figures/src-saracatinib-md-barplot.jpg" width="1966" height="1464" loading="lazy" alt="Bar plots of mean interaction energy and ligand RMSD for five candidates bound to Src kinase. Saracatinib has the strongest interaction energy, about minus 278 kJ/mol, and the lowest ligand RMSD, about 0.25 nm."></a>
+          <figcaption>Mean interaction energy and ligand RMSD per candidate, from my Src simulations.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>Nature 2025, Cell 2024</strong> Co-author</p>
+          <h3>How anti-fibrotic drug candidates bind their targets</h3>
+          <p>The Wu lab at Stanford screened drugs against cardiac fibrosis in human cell and tissue models. In both studies I ran the molecular dynamics simulations showing how the drug candidates bind their protein targets.</p>
+          <p>In the Nature study a docking screen of 10,147 repurposing compounds was narrowed to five for simulation, and we validated that saracatinib binds strongly to Src kinase. It had the strongest interaction energy and the most stable pose of the five over 100 ns.</p>
+          <div class="links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12176515/">Nature paper</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11645214/">Cell paper</a>
+          </div>
+        </div>
+      </article>
+      <article class="tile">
+        <figure>
+          <video src="figures/ipsc-cm-calcium-imaging.mp4" poster="figures/ipsc-cm-calcium-imaging-poster.jpg" width="604" height="318" autoplay muted loop playsinline preload="metadata" aria-label="Calcium imaging of seven beating cardiac organoids, each outlined and numbered, with its calcium trace and beat rate beside the field."></video>
+          <figcaption>Seven organoids in one field, each segmented, coloured by calcium level and traced on the right. Shown at half speed.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>iPSC-CM data analysis</strong> Ongoing</p>
+          <h3>Calcium imaging analysis for iPSC cardiomyocytes</h3>
+          <p>A Python pipeline for calcium optical imaging of iPSC-derived cardiomyocyte organoids and monolayers in 96-well plates. It segments each organoid, extracts its calcium transient, and measures beat rate, amplitude, transient duration (CaTD50, CaTD80, CaTD90), upstroke and decay kinetics, beat-to-beat variability and synchrony.</p>
+          <p>Drug responses are normalised to vehicle wells, so arrhythmia and line-to-line differences show up per plate. It reads two microscope formats, including 100 fps recordings with light-source flicker removed, and an interactive plate explorer and Streamlit app let biologists review every well.</p>
+        </div>
+      </article>
+      </div>
+      <div class="tile-col">
+      <article class="tile">
+        <figure>
+          <a href="figures/kcnc2-structure-panels-ab.jpg"><img src="figures/kcnc2-structure-panels-ab.jpg" width="656" height="456" loading="lazy" alt="Structural model of the Kv3.2 channel tetramer with the membrane boundaries, the channel pore, and a close-up of residues V469 and V471 in the PVP motif of helix S6."></a>
+          <figcaption>V469 and V471 sit in the PVP motif lining the channel pore.</figcaption>
+        </figure>
+        <figure class="fig-inline">
+          <a href="figures/kcnc2-pore-panel-d.jpg"><img src="figures/kcnc2-pore-panel-d.jpg" width="334" height="285" loading="lazy" alt="Pore surface from simulation and a plot of pore radius along the channel axis for wild type, V469L and V471L. V469L narrows the pore near residue 469."></a>
+          <figcaption>Pore radius along the channel in simulation. V469L narrows the pore. Mukherjee et al., HGG Advances 2022 (CC BY-NC-ND).</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>HGG Advances 2022</strong> First author</p>
+          <h3>Personalized structural biology for epilepsy variants</h3>
+          <p>Two de novo variants two residues apart in the KCNC2 (Kv3.2) potassium channel caused different forms of developmental epileptic encephalopathy. Using molecular dynamics and free-energy analysis, I showed that V471L acts as gain of function and V469L as loss of function, because V469L constricts the pore and raises the barrier for potassium ions.</p>
+          <p>I led the investigation across clinicians, biochemists and electrophysiologists, and their experiments later confirmed both predictions.</p>
+          <div class="links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">HGG Advances paper</a>
+          </div>
+        </div>
+      </article>
+      <article class="tile">
+        <figure>
+          <a href="figures/digepred-workflow.jpg"><img src="figures/digepred-workflow.jpg" width="508" height="500" loading="lazy" alt="DiGePred workflow: digenic and non-digenic gene pairs split into training, validation and held-out test sets, a random forest trained with 10-fold cross validation, and evaluation of false positives on 38 unaffected relatives and true positives on 13 new digenic pairs from the literature."></a>
+          <figcaption>DiGePred training and evaluation. Mukherjee et al., AJHG 2021.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>AJHG 2021</strong> First author</p>
+          <h3>Finding digenic disease genes with machine learning</h3>
+          <p>Some rare diseases are caused by variants in two genes acting together, which single-gene analysis misses. I built DiGePred, a random forest that predicts digenic disease gene pairs, trained with 10-fold cross validation on a set where non-digenic pairs outnumber digenic ones about 75 to 1.</p>
+          <p>False positives were checked on gene pairs from 38 unaffected relatives and true positives on 13 new digenic pairs from the literature. With the Undiagnosed Diseases Network it was applied to 100+ undiagnosed patients, and it contributed to a new candidate gene pair for Mayer-Rokitansky-Küster-Hauser syndrome.</p>
+          <div class="links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8546038/">AJHG paper</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">MRKH follow-up</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+      <article class="tile tile-slim">
+        <div class="tile-text">
+          <p class="meta mono"><strong>Greenstone Biosciences</strong> Ongoing</p>
+          <h3>Synthesizable design under ADMET constraints</h3>
+          <p>A closed-loop chemistry workflow. SyntheMol proposes molecules that can be made from Enamine REAL building blocks with reaction-aware rules, QSAR and ADMET models score them, and an active learning loop retrains on each round before the next is ranked.</p>
+          <p>Multi-parameter optimization balances potency against BBB permeability and hERG liability. The aim is safe, synthesizable candidates for inflammatory and fibrotic diseases, taken forward with medicinal chemists and external CRO partners.</p>
+        </div>
+      </article>
   </div>
 </section>
 
@@ -761,23 +772,9 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
 </footer>
 <script>
 (function () {
-  var areas = document.querySelectorAll('.area');
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  areas.forEach(function (d) {
-    d.addEventListener('toggle', function () {
-      d.querySelectorAll('video').forEach(function (v) {
-        if (!d.open) v.pause(); else if (!reduce) v.play().catch(function () {});
-      });
-      if (!d.open) return;
-      areas.forEach(function (o) { if (o !== d) o.open = false; });
-      var r = d.getBoundingClientRect();
-      if (r.top < 64 || r.top > window.innerHeight * 0.6) d.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
-    });
-  });
-  if (reduce) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
   }
-  if (location.hash) { var t = document.querySelector(location.hash); if (t && t.tagName === 'DETAILS') t.open = true; }
 })();
 </script>
 </body>
