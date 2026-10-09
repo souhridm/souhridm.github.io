@@ -11,11 +11,8 @@
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://souhridm.github.io/">
 <meta property="og:image" content="https://souhridm.github.io/photos/souhrid-mukherjee.jpg">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="https://souhridm.github.io/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,32 +41,19 @@
 </script>
 <style>
 :root {
-  --bg: #fafaf9;
-  --surface: #f1f1ef;
+  --bg: #ffffff;
+  --surface: #f4f5f7;
   --text: #18181b;
   --muted: #52525b;
-  --line: #e2e2df;
+  --line: #e3e5e8;
   --accent: #1d4ed8;
   --accent-ink: #1e40af;
   --accent-soft: #e6ecfb;
   --on-accent: #fafaf9;
   --radius: 10px;
-  --wrap: 1120px;
-  --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111113;
-    --surface: #1a1a1d;
-    --text: #ececee;
-    --muted: #a1a1aa;
-    --line: #2a2a2e;
-    --accent: #7ea2f7;
-    --accent-ink: #9db8fa;
-    --accent-soft: #1c2440;
-    --on-accent: #111113;
-  }
+  --wrap: 1400px;
+  --sans: Arial, Helvetica, sans-serif;
+  --mono: Arial, Helvetica, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -95,8 +79,8 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; margin-bottom: 0.7
 h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: -0.01em; }
 p { margin: 0 0 1rem; }
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
-.lede { color: var(--muted); max-width: 62ch; margin-bottom: 2.5rem; }
-.mono { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0; }
+.lede { color: var(--muted); max-width: 80ch; margin-bottom: 2.5rem; }
+.mono { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0; }
 section { padding: 88px 0; }
 section + section { border-top: 1px solid var(--line); }
 
@@ -121,7 +105,7 @@ header.nav {
 .hero .wrap { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: center; }
 .hero .role { color: var(--muted); font-size: 0.98rem; margin-bottom: 1.25rem; }
 .hero h1 { font-size: clamp(2.4rem, 5.2vw, 3.9rem); font-weight: 650; letter-spacing: -0.035em; margin-bottom: 1.25rem; }
-.hero .sub { font-size: 1.22rem; line-height: 1.5; max-width: 34ch; margin-bottom: 2rem; }
+.hero .sub { font-size: 1.22rem; line-height: 1.5; max-width: 44ch; margin-bottom: 2rem; }
 .hero figure { margin: 0; justify-self: end; width: 100%; max-width: 380px; }
 .hero figure img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 22%; border-radius: var(--radius); width: 100%; height: auto; background: var(--surface); }
 .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -142,11 +126,11 @@ header.nav {
 
 /* Facts */
 .facts { padding: 0 0 72px; border-top: 0; }
-.facts dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; border-top: 1px solid var(--line); }
+.facts dl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border-top: 1px solid var(--line); }
 .facts dl > div { padding: 22px 24px 0 0; }
 .facts dt { font-size: 2rem; font-weight: 600; letter-spacing: -0.03em; }
 .facts dd { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; max-width: 22ch; }
-@media (max-width: 760px) { .facts dl { grid-template-columns: repeat(2, 1fr); row-gap: 8px; } }
+@media (max-width: 760px) { .facts dl { grid-template-columns: 1fr; row-gap: 8px; } }
 
 /* Areas */
 .areas { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
@@ -165,7 +149,7 @@ header.nav {
 .case .meta { color: var(--muted); }
 .case .meta strong { display: block; color: var(--text); font-weight: 500; font-family: var(--sans); font-size: 0.95rem; margin-bottom: 4px; }
 .case h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
-.case p { max-width: 68ch; }
+.case p { max-width: 90ch; }
 .case .links { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.95rem; }
 @media (max-width: 760px) { .case { grid-template-columns: 1fr; gap: 10px; } }
 
@@ -176,7 +160,7 @@ header.nav {
 .role-item h3 { font-size: 1.25rem; }
 .role-item .org { color: var(--muted); margin: 2px 0 0.75rem; }
 .role-item .note { font-size: 0.95rem; color: var(--muted); border-left: 2px solid var(--accent); padding-left: 12px; margin-bottom: 1rem; }
-.role-item ul { margin: 0; padding-left: 1.1rem; max-width: 70ch; }
+.role-item ul { margin: 0; padding-left: 1.1rem; max-width: 95ch; }
 .role-item li { margin-bottom: 0.4rem; }
 .role-item li::marker { color: var(--muted); }
 .early { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 40px; padding: 0 !important; list-style: none; margin: 0; }
@@ -208,7 +192,7 @@ header.nav {
 .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 .contact .lede { margin-bottom: 0; }
 .contact ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.contact li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: baseline; }
+.contact li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: baseline; }
 .contact li .mono { color: var(--muted); }
 .contact li a { overflow-wrap: anywhere; }
 @media (max-width: 760px) { .contact .wrap { grid-template-columns: 1fr; } }
@@ -258,7 +242,6 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
       <div><dt>13 years</dt><dd>in research, 10 of them computational</dd></div>
       <div><dt>18+</dt><dd>peer-reviewed manuscripts</dd></div>
       <div><dt>3</dt><dd>first-author papers, in Circulation, AJHG and HGG Advances</dd></div>
-      <div><dt>2</dt><dd>current appointments, academic and industry</dd></div>
     </dl>
   </div>
 </section>
@@ -539,6 +522,8 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
     </div>
     <ul>
       <li><span class="mono">Email</span><a href="mailto:souhrid.mukherjee@gmail.com">souhrid.mukherjee@gmail.com</a></li>
+      <li><span class="mono">Stanford</span><a href="mailto:souhridm@stanford.edu">souhridm@stanford.edu</a></li>
+      <li><span class="mono">Greenstone</span><a href="mailto:souhridmukherjee@greenstonebio.com">souhridmukherjee@greenstonebio.com</a></li>
       <li><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/souhrid-mukherjee">linkedin.com/in/souhrid-mukherjee</a></li>
       <li><span class="mono">GitHub</span><a href="https://github.com/souhridm">github.com/souhridm</a></li>
       <li><span class="mono">Scholar</span><a href="https://scholar.google.com/citations?user=59gkka0AAAAJ&amp;hl=en">Google Scholar profile</a></li>
