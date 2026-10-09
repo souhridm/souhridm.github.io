@@ -1,64 +1,554 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
- <img src="photos/Mukherjee_Souhrid.jpg" alt="professional headshot" style="float:right;width:108px;height:135px;">
- <H1 class='display'>  Souhrid Mukherjee PhD<br><br>
-
-
-  <div class="topnav">
-   <a class="active" href="#home">Home</a>
-   <a href="#news">Education</a>
-   <a href="#contact">Research</a>
-   <a href="#about">Publications</a>
-   <a href="#about">Contact</a>
-  </div>
- </H1>
-
-<script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Souhrid Mukherjee, PhD | Computational Biologist</title>
+<meta name="description" content="Souhrid Mukherjee, PhD. Computational biologist working on machine learning, molecular simulation and genomics for drug discovery and drug safety. Stanford Cardiovascular Institute and Greenstone Biosciences.">
+<meta name="author" content="Souhrid Mukherjee">
+<meta property="og:title" content="Souhrid Mukherjee, PhD">
+<meta property="og:description" content="Machine learning, molecular simulation and genomics for drug discovery and drug safety.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://souhridm.github.io/">
+<meta property="og:image" content="https://souhridm.github.io/photos/souhrid-mukherjee.jpg">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://souhridm.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Souhrid Mukherjee",
+  "honorificSuffix": "PhD",
+  "jobTitle": "Basic Life Sciences Research Scientist",
+  "worksFor": [
+    {"@type": "Organization", "name": "Stanford Cardiovascular Institute"},
+    {"@type": "Organization", "name": "Greenstone Biosciences"}
+  ],
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Vanderbilt University"},
+    {"@type": "CollegeOrUniversity", "name": "University of Calcutta"},
+    {"@type": "CollegeOrUniversity", "name": "Presidency College, Kolkata"}
+  ],
+  "url": "https://souhridm.github.io/",
+  "image": "https://souhridm.github.io/photos/souhrid-mukherjee.jpg",
+  "sameAs": [
+    "https://www.linkedin.com/in/souhrid-mukherjee",
+    "https://github.com/souhridm",
+    "https://orcid.org/0000-0002-8355-3000"
+  ]
+}
 </script>
-</head>
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #f1f1ef;
+  --text: #18181b;
+  --muted: #52525b;
+  --line: #e2e2df;
+  --accent: #1d4ed8;
+  --accent-ink: #1e40af;
+  --accent-soft: #e6ecfb;
+  --on-accent: #fafaf9;
+  --radius: 10px;
+  --wrap: 1120px;
+  --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111113;
+    --surface: #1a1a1d;
+    --text: #ececee;
+    --muted: #a1a1aa;
+    --line: #2a2a2e;
+    --accent: #7ea2f7;
+    --accent-ink: #9db8fa;
+    --accent-soft: #1c2440;
+    --on-accent: #111113;
+  }
+}
 
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  font-feature-settings: "tnum" 1;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: var(--on-accent); }
+a { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; margin-bottom: 0.75rem; }
+h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: -0.01em; }
+p { margin: 0 0 1rem; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+.lede { color: var(--muted); max-width: 62ch; margin-bottom: 2.5rem; }
+.mono { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0; }
+section { padding: 88px 0; }
+section + section { border-top: 1px solid var(--line); }
+
+/* Navigation */
+.skip { position: absolute; left: -999px; top: 8px; background: var(--text); color: var(--bg); padding: 8px 12px; border-radius: 6px; z-index: 20; }
+.skip:focus { left: 8px; }
+header.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 24px; }
+.nav .brand { font-weight: 600; color: var(--text); text-decoration: none; white-space: nowrap; }
+.nav ul { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; }
+.nav ul a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+.nav ul a:hover { color: var(--text); }
+@media (max-width: 760px) { .nav ul { display: none; } }
+
+/* Hero */
+.hero { padding: 72px 0 80px; }
+.hero .wrap { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: center; }
+.hero .role { color: var(--muted); font-size: 0.98rem; margin-bottom: 1.25rem; }
+.hero h1 { font-size: clamp(2.4rem, 5.2vw, 3.9rem); font-weight: 650; letter-spacing: -0.035em; margin-bottom: 1.25rem; }
+.hero .sub { font-size: 1.22rem; line-height: 1.5; max-width: 34ch; margin-bottom: 2rem; }
+.hero figure { margin: 0; justify-self: end; width: 100%; max-width: 380px; }
+.hero figure img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 22%; border-radius: var(--radius); width: 100%; height: auto; background: var(--surface); }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; height: 46px; padding: 0 20px;
+  border-radius: var(--radius); font-weight: 500; text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--accent); transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--accent); color: var(--on-accent); }
+.btn.primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+.btn.ghost { color: var(--accent-ink); background: transparent; }
+.btn.ghost:hover { background: var(--accent-soft); }
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .hero figure { justify-self: start; max-width: 200px; order: -1; }
+}
+
+/* Facts */
+.facts { padding: 0 0 72px; border-top: 0; }
+.facts dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; border-top: 1px solid var(--line); }
+.facts dl > div { padding: 22px 24px 0 0; }
+.facts dt { font-size: 2rem; font-weight: 600; letter-spacing: -0.03em; }
+.facts dd { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; max-width: 22ch; }
+@media (max-width: 760px) { .facts dl { grid-template-columns: repeat(2, 1fr); row-gap: 8px; } }
+
+/* Areas */
+.areas { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.area { background: var(--surface); border-radius: var(--radius); padding: 28px; grid-column: span 2; display: flex; flex-direction: column; }
+.area.wide { grid-column: span 3; }
+.area.feature { background: var(--accent-soft); }
+.area p { color: var(--muted); font-size: 0.97rem; }
+.area h3 { margin-bottom: 0.6rem; }
+.area .tools { margin-top: auto; padding-top: 0.5rem; color: var(--text); opacity: 0.85; }
+@media (max-width: 980px) { .area, .area.wide { grid-column: span 3; } }
+@media (max-width: 640px) { .areas { grid-template-columns: 1fr; } .area, .area.wide { grid-column: auto; } }
+
+/* Case studies */
+.case { display: grid; grid-template-columns: 200px 1fr; gap: 40px; padding: 36px 0; border-top: 1px solid var(--line); }
+.case:first-of-type { border-top: 0; padding-top: 8px; }
+.case .meta { color: var(--muted); }
+.case .meta strong { display: block; color: var(--text); font-weight: 500; font-family: var(--sans); font-size: 0.95rem; margin-bottom: 4px; }
+.case h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+.case p { max-width: 68ch; }
+.case .links { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.95rem; }
+@media (max-width: 760px) { .case { grid-template-columns: 1fr; gap: 10px; } }
+
+/* Experience */
+.roles { display: grid; gap: 48px; }
+.role-item { display: grid; grid-template-columns: 200px 1fr; gap: 40px; }
+.role-item .when { color: var(--muted); padding-top: 3px; }
+.role-item h3 { font-size: 1.25rem; }
+.role-item .org { color: var(--muted); margin: 2px 0 0.75rem; }
+.role-item .note { font-size: 0.95rem; color: var(--muted); border-left: 2px solid var(--accent); padding-left: 12px; margin-bottom: 1rem; }
+.role-item ul { margin: 0; padding-left: 1.1rem; max-width: 70ch; }
+.role-item li { margin-bottom: 0.4rem; }
+.role-item li::marker { color: var(--muted); }
+.early { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 40px; padding: 0 !important; list-style: none; margin: 0; }
+.early li { padding: 6px 0; }
+.early span { display: block; color: var(--muted); font-size: 0.92rem; }
+@media (max-width: 760px) { .role-item { grid-template-columns: 1fr; gap: 6px; } .early { grid-template-columns: 1fr; } }
+
+/* Publications */
+.pubgroup { display: grid; grid-template-columns: 200px 1fr; gap: 40px; margin-bottom: 40px; }
+.pubgroup h3 { font-size: 1rem; color: var(--muted); font-weight: 500; padding-top: 4px; }
+.pubs { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.pubs .venue { font-family: var(--mono); font-size: 0.8rem; color: var(--accent-ink); }
+.pubs .title { display: block; font-weight: 500; margin: 2px 0; color: var(--text); text-decoration-color: var(--line); }
+.pubs .title:hover { color: var(--accent-ink); text-decoration-color: currentColor; }
+.pubs .authors { color: var(--muted); font-size: 0.93rem; }
+.pubs .authors b { color: var(--text); font-weight: 600; }
+@media (max-width: 760px) { .pubgroup { grid-template-columns: 1fr; gap: 12px; } }
+
+/* Education */
+.edu { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; margin-top: 2rem; }
+.edu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.edu li strong { display: block; font-weight: 600; }
+.edu li span { color: var(--muted); font-size: 0.95rem; }
+.edu h3 { margin-bottom: 1.25rem; font-size: 1rem; color: var(--muted); font-weight: 500; }
+@media (max-width: 760px) { .edu { grid-template-columns: 1fr; gap: 40px; } }
+
+/* Contact */
+.contact { background: var(--surface); }
+.contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.contact .lede { margin-bottom: 0; }
+.contact ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.contact li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: baseline; }
+.contact li .mono { color: var(--muted); }
+.contact li a { overflow-wrap: anywhere; }
+@media (max-width: 760px) { .contact .wrap { grid-template-columns: 1fr; } }
+footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; background: var(--surface); border-top: 1px solid var(--line); }
+</style>
+</head>
 <body>
-<h2>About me</h2>
-<p style="text-align:left;font-family:sans-serif;font-size:15pt;">
- I am a fifth year PhD candidate at Vanderbilt University, and I have developed computational tools and approaches to interpret rare disease causing variants during for my doctoral research. I am skilled in computational structural biology, genomics, machine learning and molecular dynamics (MD) simulations. I have had the opportunity for my research to directly benefit individuals suffering from undiagnosed diseases. I am motivated to keep developing machine learning tools to facilitate disease diagnosis and uncover disease mechanisms. I am enthused about working in industry to help develop improved precise, personalized healthcare technology and pharmaceutical intervention strategies. I have successfully led multiple interdisciplinary and collaborative projects to completion, and extensively liasoned with clinicians and wet-lab scientists. I have contributed to over 7 manuscripts as lead and supporting author. I have demonstrated my communication skills presented my research, both orally and as posters, intramurally and at multiple International conferences. I have always enjoyed working as a team and have performed theater profusely in school and college. I have served as a part of multiple student organizations over the past five years at Vanderbilt to contribute to the community and further develop my leadership and teamwork skills.
-</p>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Souhrid Mukherjee</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#work">Selected work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="role">Research Scientist, Stanford Cardiovascular Institute<br>Senior Scientist, Greenstone Biosciences</p>
+      <h1>Souhrid Mukherjee, PhD</h1>
+      <p class="sub">Computational biologist using machine learning, molecular simulation and genomics to find better drugs and flag unsafe ones early.</p>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:souhrid.mukherjee@gmail.com">Email me</a>
+        <a class="btn ghost" href="#publications">Publications</a>
+      </div>
+    </div>
+    <figure>
+      <img src="photos/souhrid-mukherjee.jpg" width="667" height="1000" alt="Portrait of Souhrid Mukherjee">
+    </figure>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <dl>
+      <div><dt>13 years</dt><dd>in research, 10 of them computational</dd></div>
+      <div><dt>18+</dt><dd>peer-reviewed manuscripts</dd></div>
+      <div><dt>3</dt><dd>first-author papers, in Circulation, AJHG and HGG Advances</dd></div>
+      <div><dt>2</dt><dd>current appointments, academic and industry</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>What I work on</h2>
+    <p class="lede">My work runs from atoms to patients. I have built predictors for drug toxicity and rare disease genetics, simulated how single mutations change a protein, analysed single-cell and bulk omics for target decisions, and shipped the pipelines and tools that let other scientists use the results.</p>
+
+    <div class="areas">
+      <article class="area wide feature">
+        <h3>Drug safety and ADMET prediction</h3>
+        <p>Machine learning that predicts absorption, distribution, metabolism, excretion and toxicity from structure. I co-developed ADMET-AI and led its cardiotoxicity extension, which outperformed common ADMET predictors on FDA drug-induced cardiotoxicity labels.</p>
+        <p class="tools mono">RDKit, scikit-learn, XGBoost, SHAP, hERG, BBB permeability</p>
+      </article>
+      <article class="area wide">
+        <h3>Generative and constrained molecular design</h3>
+        <p>Design loops that generate synthesizable molecules from Enamine REAL building blocks with SyntheMol, then rank them by potency, BBB permeability and safety using QSAR and ADMET models in an active learning cycle.</p>
+        <p class="tools mono">SyntheMol, Enamine REAL, QSAR, MPO, active learning</p>
+      </article>
+      <article class="area">
+        <h3>Molecular simulation and structure</h3>
+        <p>Molecular dynamics and free-energy analysis to explain how variants and ligands change protein behaviour, plus docking for off-target and selectivity profiling.</p>
+        <p class="tools mono">OpenMM, GROMACS, NAMD, AutoDock Vina</p>
+      </article>
+      <article class="area">
+        <h3>Human genetics and rare disease</h3>
+        <p>Variant interpretation and gene-pair prediction for undiagnosed patients, built with clinicians in the Undiagnosed Diseases Network.</p>
+        <p class="tools mono">Random forests, GATK4, VEP, WGS</p>
+      </article>
+      <article class="area">
+        <h3>Multi-omics and target assessment</h3>
+        <p>Bulk and single-cell RNA-seq, proteomics and phenotypic data from human iPSC models and patient tissue, used to judge whether a target is worth pursuing.</p>
+        <p class="tools mono">DESeq2, Scanpy, Seurat, pseudobulk</p>
+      </article>
+      <article class="area wide">
+        <h3>Research software and data platforms</h3>
+        <p>Pipelines and tools that other scientists use directly: a SLURM whole-genome sequencing pipeline, Streamlit dashboards, interactive analysis consoles, and a tested, modular research platform that pairs LLMs with PubMed, GEO, ChEMBL, ClinVar and ClinicalTrials.gov.</p>
+        <p class="tools mono">Python, R, SQL, FastAPI, PostgreSQL, Streamlit, HPC</p>
+      </article>
+      <article class="area wide">
+        <h3>Human-relevant models and wet-lab experience</h3>
+        <p>I started at the bench with sarcomeric protein biochemistry for cardiomyopathy mutations, and more recently have cultured patient-derived iPSC neural progenitors and astrocytes. I also co-wrote a JCI review on moving safety testing beyond animal models.</p>
+        <p class="tools mono">iPSC culture, protein biochemistry, NAMs, FDA Modernization Act 2.0</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="lede">A closer look at a few projects: the problem, and what I did about it.</p>
+
+    <article class="case">
+      <div class="meta mono"><strong>Circulation, 2025</strong>First author</div>
+      <div>
+        <h3>Interpretable prediction of drug-induced cardiotoxicity</h3>
+        <p>Cardiotoxicity is a common reason drugs fail late or are withdrawn. I led the conceptualization and deployment of a cardiotoxicity model built on ADMET-AI and trained on the FDA drug-induced cardiotoxicity (DICT) dataset. It outperformed common ADMET predictors, and an interpretability analysis shows which molecular properties drive each prediction.</p>
+        <p>The underlying platform, ADMET-AI (Bioinformatics, 2024), is among the fastest and most accurate free ADMET predictors and is used to triage large chemical libraries. It is a collaboration between Greenstone Biosciences and James Zou's group at Stanford.</p>
+        <div class="links">
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11996029/">Circulation paper</a>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11226862/">ADMET-AI paper</a>
+          <a href="https://github.com/swansonk14/admet_ai">ADMET-AI code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta mono"><strong>AJHG, 2021</strong>First author</div>
+      <div>
+        <h3>Finding digenic disease genes with machine learning</h3>
+        <p>Some rare diseases are caused by variants in two genes acting together, which single-gene analysis misses. I built DiGePred, a random forest that predicts digenic disease gene pairs. With the Undiagnosed Diseases Network it was applied to more than 100 undiagnosed patients and several rare disease cohorts, and it contributed to identifying a new gene pair in Mayer-Rokitansky-Küster-Hauser syndrome.</p>
+        <div class="links">
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8546038/">AJHG paper</a>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">MRKH follow-up</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta mono"><strong>HGG Advances, 2022</strong>First author</div>
+      <div>
+        <h3>Personalized structural biology for epilepsy variants</h3>
+        <p>Two de novo variants two residues apart in the KCNC2 (Kv3.2) potassium channel caused different epilepsy phenotypes. Using molecular dynamics and free-energy analysis, I showed that V471L acts as gain of function and V469L as loss of function. Biochemistry and electrophysiology later confirmed both predictions.</p>
+        <div class="links">
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">HGG Advances paper</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta mono"><strong>Greenstone Biosciences</strong>Ongoing</div>
+      <div>
+        <h3>Synthesizable design under ADMET constraints</h3>
+        <p>A closed-loop chemistry workflow. SyntheMol proposes molecules that can be made from Enamine REAL building blocks with reaction-aware rules, QSAR and ADMET models score them, and an active learning loop retrains on each round. Multi-parameter optimization balances potency against BBB permeability and hERG liability. I work with medicinal chemists and external CRO partners to take ranked compounds forward.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="meta mono"><strong>Cell 2024, Nature 2025</strong>Co-author</div>
+      <div>
+        <h3>Cardiac fibrosis and human iPSC models</h3>
+        <p>At the Stanford Cardiovascular Institute I build models of drug response and toxicity that combine whole-genome sequencing, transcriptomics and functional readouts from human iPSC-derived cardiomyocytes, and I link those in vitro phenotypes to clinical endpoints. I am a co-author on the Wu lab's multiscale fibrosis screen that identified MD2 as a therapeutic target, and on the follow-up showing that blocking stromal mechanosensing suppresses cardiac fibrosis.</p>
+        <div class="links">
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11645214/">Cell paper</a>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12176515/">Nature paper</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="lede">Two current appointments, one academic and one in industry, both since 2022.</p>
+
+    <div class="roles">
+      <div class="role-item">
+        <div class="when mono">2022 to present</div>
+        <div>
+          <h3>Basic Life Sciences Research Scientist</h3>
+          <p class="org">Stanford Cardiovascular Institute, Palo Alto, CA</p>
+          <p class="note">Full-time staff scientist appointment since 2025, not a postdoctoral position. Visiting Scientist 2022 to 2024.</p>
+          <ul>
+            <li>Build machine learning models of drug response and toxicity from WGS, transcriptomics and functional phenotyping of human iPSC-derived cardiomyocytes.</li>
+            <li>Develop multi-modal integration pipelines across RNA-seq, proteomics and phenotypic assays for biomarker discovery.</li>
+            <li>Run molecular dynamics simulations that give atom-level protein and ligand features for model interpretation.</li>
+            <li>Connect in vitro cellular phenotypes to clinical endpoints, and mentor junior researchers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item">
+        <div class="when mono">2022 to present</div>
+        <div>
+          <h3>Senior Scientist, AI and Computational Biology</h3>
+          <p class="org">Greenstone Biosciences, Palo Alto, CA</p>
+          <p class="note">Full-time 2022 to 2025 as Scientist, then Senior Scientist. Part-time employee in the same Senior Scientist role since 2025.</p>
+          <ul>
+            <li>Co-developed ADMET-AI and led ADMET-AI DICT for drug-induced cardiotoxicity.</li>
+            <li>Built RDKit pipelines for featurization, fingerprinting and SAR modeling, and MPO workflows for BBB permeability and hERG liability.</li>
+            <li>Run iterative QSAR-driven design cycles that rank compound modifications, working with medicinal chemists and external CRO partners.</li>
+            <li>Built end-to-end data pipelines for high-throughput chemical and biological data, and Streamlit dashboards that deliver analyses to colleagues.</li>
+            <li>Cultured and imaged patient-derived iPSC neural progenitors and astrocytes for Alexander disease research, in partnership with the charity Team Max.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item">
+        <div class="when mono">2016 to 2022</div>
+        <div>
+          <h3>PhD Researcher, Computational Biology</h3>
+          <p class="org">Vanderbilt University, Nashville, TN</p>
+          <p class="note">Co-mentored by Tony Capra and Jens Meiler.</p>
+          <ul>
+            <li>Developed DiGePred for digenic disease prediction with the Undiagnosed Diseases Network, applied to more than 100 patients.</li>
+            <li>Used molecular dynamics to resolve opposite mechanisms of two neighbouring KCNC2 epilepsy variants, later validated experimentally.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item">
+        <div class="when mono">2012 to 2016</div>
+        <div>
+          <h3>Early research, India</h3>
+          <p class="org">Biochemistry, stem cells and simulation</p>
+          <ul class="early">
+            <li>Junior Research Fellow, inStem / NCBS, Bengaluru<span>2014 to 2016. Sarcomeric protein biochemistry with John Mercer and Jim Spudich. Co-author, PNAS 2017.</span></li>
+            <li>Research Intern, Tissue Engineering Group, IIT Delhi<span>2014</span></li>
+            <li>Research Intern, Stem Cell Facility, AIIMS New Delhi<span>2013</span></li>
+            <li>Summer Research Intern, Bose Institute, Kolkata<span>2012. Molecular dynamics simulations.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2>Publications</h2>
+    <p class="lede">Selected papers from 18+ manuscripts. The full list is on <a href="https://orcid.org/0000-0002-8355-3000">ORCID</a>.</p>
+
+    <div class="pubgroup">
+      <h3>First author</h3>
+      <ul class="pubs">
+        <li>
+          <span class="venue">Circulation 2025</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11996029/">ADMET-AI enables interpretable predictions of drug-induced cardiotoxicity</a>
+          <span class="authors"><b>Mukherjee S</b>, Swanson K, Walther P, Shivnaraine RV, Leitz J, Pang PD, Zou J, Wu JC</span>
+        </li>
+        <li>
+          <span class="venue">HGG Advances 2022</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">Personalized structural biology reveals the molecular mechanisms underlying heterogeneous epileptic phenotypes caused by de novo KCNC2 variants</a>
+          <span class="authors"><b>Mukherjee S</b>, Cassini TA, Hu N, et al., Capra JA</span>
+        </li>
+        <li>
+          <span class="venue">American Journal of Human Genetics 2021</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8546038/">Identifying digenic disease genes via machine learning in the Undiagnosed Diseases Network</a>
+          <span class="authors"><b>Mukherjee S</b>, Cogan JD, Newman JH, Phillips JA 3rd, Hamid R, Meiler J, Capra JA</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pubgroup">
+      <h3>Co-author</h3>
+      <ul class="pubs">
+        <li>
+          <span class="venue">Nature 2025</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12176515/">Selective inhibition of stromal mechanosensing suppresses cardiac fibrosis</a>
+          <span class="authors">Cho S, Rhee S, Madl CM, et al., <b>Mukherjee S</b>, et al., Wu JC</span>
+        </li>
+        <li>
+          <span class="venue">Cell 2024</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11645214/">Multiscale drug screening for cardiac fibrosis identifies MD2 as a therapeutic target</a>
+          <span class="authors">Zhang H, Thai PN, Shivnaraine RV, et al., <b>Mukherjee S</b>, et al., Wu JC</span>
+        </li>
+        <li>
+          <span class="venue">Bioinformatics 2024</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11226862/">ADMET-AI: a machine learning ADMET platform for evaluation of large-scale chemical libraries</a>
+          <span class="authors">Swanson K, Walther P, Leitz J, <b>Mukherjee S</b>, Wu JC, Shivnaraine RV, Zou J</span>
+        </li>
+        <li>
+          <span class="venue">Journal of Clinical Investigation 2023</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10617761/">FDA Modernization Act 2.0: transitioning beyond animal models with human cells, organoids, and AI/ML-based approaches</a>
+          <span class="authors">Zushin PH, <b>Mukherjee S</b>, Wu JC</span>
+        </li>
+        <li>
+          <span class="venue">Science Translational Medicine 2023</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10297796/">SGLT2 inhibitor ameliorates endothelial dysfunction associated with the common ALDH2 alcohol flushing variant</a>
+          <span class="authors">Guo H, Yu X, et al., <b>Mukherjee S</b>, et al., Wu JC</span>
+        </li>
+        <li>
+          <span class="venue">Human Genetics 2021</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">Genetics of agenesis/hypoplasia of the uterus and vagina: narrowing down the number of candidate genes for Mayer-Rokitansky-Küster-Hauser Syndrome</a>
+          <span class="authors">Mikhael S, Dugar S, et al., <b>Mukherjee S</b>, Capra JA, et al., Layman LC</span>
+        </li>
+        <li>
+          <span class="venue">PNAS 2017</span>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5651771/">Molecular mechanisms and structural features of cardiomyopathy-causing troponin T mutants in the tropomyosin overlap region</a>
+          <span class="authors">Gangadharan B, Sunitha MS, <b>Mukherjee S</b>, Chowdhury RR, Haque F, Sekar N, Sowdhamini R, Spudich JA, Mercer JA</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education and honors</h2>
+    <div class="edu">
+      <div>
+        <h3>Education</h3>
+        <ul>
+          <li><strong>PhD, Biological Sciences (Computational Biology)</strong><span>Vanderbilt University, Nashville, TN, 2016 to 2022</span></li>
+          <li><strong>MS, Biochemistry</strong><span>University of Calcutta, Kolkata, 2011 to 2013</span></li>
+          <li><strong>BS, Biochemistry</strong><span>Presidency College, Kolkata, 2008 to 2011</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Honors</h3>
+        <ul>
+          <li><strong>VISP Graduate Student Fellowship</strong><span>Vanderbilt University, 2016 to 2018</span></li>
+          <li><strong>CSIR-NET Research Fellowship, All India Rank 51</strong><span>Council of Scientific and Industrial Research, India, 2013 to 2016</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Contact</h2>
+      <p class="lede">I am open to conversations about computational biology, drug discovery and drug safety roles. Email is the best way to reach me.</p>
+    </div>
+    <ul>
+      <li><span class="mono">Email</span><a href="mailto:souhrid.mukherjee@gmail.com">souhrid.mukherjee@gmail.com</a></li>
+      <li><span class="mono">LinkedIn</span><a href="https://www.linkedin.com/in/souhrid-mukherjee">linkedin.com/in/souhrid-mukherjee</a></li>
+      <li><span class="mono">GitHub</span><a href="https://github.com/souhridm">github.com/souhridm</a></li>
+      <li><span class="mono">ORCID</span><a href="https://orcid.org/0000-0002-8355-3000">0000-0002-8355-3000</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Souhrid Mukherjee, Palo Alto, CA</div>
+</footer>
 </body>
 </html>
-
-<style>
- .display {
-  color: #fee391;
-  font-size:40px;
-  background-color: #252525;
-  text-align: left;
- }
- body {
-  margin: 10px;
-  font-family: Arial, Helvetica, sans-serif;
- }
-
- .topnav {
-  overflow: hidden;
-  background-color: #252525;
- }
-
- .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
- }
-
- .topnav a:hover {
-  background-color: #ddd;
-  color: #252525;
- }
-
- .topnav a.active {
-  background-color: #fee391;
-  color: #252525;
- }
-</style>
