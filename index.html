@@ -108,7 +108,7 @@ header.nav {
 .hero .tagline { font-size: clamp(1.3rem, 2.2vw, 1.65rem); font-weight: bold; color: var(--accent-ink); margin: -0.25rem 0 0.9rem; letter-spacing: -0.01em; line-height: 1.25; }
 .hero .sub { font-size: 1.15rem; line-height: 1.55; max-width: 56ch; margin-bottom: 2rem; }
 .hero figure { margin: 0; justify-self: end; width: 100%; max-width: 380px; }
-.hero figure img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 22%; border-radius: var(--radius); width: 100%; height: auto; background: var(--surface); }
+.hero figure img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 50%; border-radius: var(--radius); width: 100%; height: auto; background: var(--surface); }
 .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn {
   display: inline-flex; align-items: center; height: 46px; padding: 0 20px;
@@ -174,6 +174,7 @@ header.nav {
 .tile p { font-size: 0.96rem; }
 .tile .links { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.93rem; }
 .tile .tools { color: var(--muted); margin: 0; }
+.tile .fig-wide { margin-top: 18px; }
 .tile .fig-inline { display: grid; grid-template-columns: 46% 1fr; gap: 12px; align-items: center; }
 .tile .fig-inline figcaption { margin: 0; }
 .tile-band { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.6fr); gap: 28px; align-items: start; margin-bottom: 16px; background: var(--surface); border-color: transparent; padding: 28px; }
@@ -312,7 +313,7 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
       </div>
     </div>
     <figure>
-      <img src="photos/souhrid-mukherjee.jpg" width="667" height="1000" alt="Portrait of Souhrid Mukherjee">
+      <img src="photos/souhrid-mukherjee.jpg" width="800" height="1000" alt="Portrait of Souhrid Mukherjee">
     </figure>
   </div>
 </section>
@@ -634,6 +635,24 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
           </ol>
           <p class="pipe-loop"><strong>Active learning</strong> Experimental results retrain the models before the next round. Candidates that stay safe and active advance for inflammatory and fibrotic diseases.</p>
           <figcaption>One round of the design loop. Each round starts from what the last round learned.</figcaption>
+        </figure>
+      </article>
+
+      <article class="tile tile-slim">
+        <div class="tile-text">
+          <p class="meta mono"><strong>Stem Cell Research 2026</strong> Co-author</p>
+          <h3>Whole-genome QC for patient-derived iPSC lines</h3>
+          <p>Before anyone builds a disease model on a new patient iPSC line, the line has to be shown to be the right donor and genomically intact. I built and run the genome analysis for the Stanford Cardiovascular Institute iPSC biobank: it confirms sample identity, checks sequencing quality, infers genetic ancestry, annotates pathogenic variants, and screens for copy number changes the cells picked up in culture.</p>
+          <p>That QC supports the lab's published iPSC line reports, including lines from Fabry disease patients carrying GLA mutations, and lines for Williams syndrome, thoracic aortic aneurysm with ACTA2 mutations, and hereditary hemorrhagic telangiectasia with ACVRL1 mutations.</p>
+          <div class="links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13618801/">Fabry disease lines</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11984571/">Williams syndrome lines</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12767169/">ACTA2 aneurysm lines</a>
+          </div>
+        </div>
+        <figure class="fig-wide">
+          <a href="figures/wgs-cnv-karyotype.jpg"><img src="figures/wgs-cnv-karyotype.jpg" width="2448" height="594" loading="lazy" alt="Genome-wide copy number plot for one iPSC line. Log R ratio in 1 megabase bins across chromosomes 1 to 22, X and Y, sitting in a flat band with no large deviations, above a chromosome ideogram."></a>
+          <figcaption>Copy number across the genome for one iPSC line, in 1 Mb bins. A flat band means no large changes acquired in culture, and the X and Y pattern confirms the donor's sex matches the record. Example output from the pipeline, with sample identifiers removed.</figcaption>
         </figure>
       </article>
   </div>
