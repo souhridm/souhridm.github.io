@@ -259,6 +259,7 @@ header.nav {
 .pubs .title:hover { color: var(--accent-ink); text-decoration-color: currentColor; }
 .pubs .authors { color: var(--muted); font-size: 0.93rem; }
 .pubs .authors b { color: var(--text); font-weight: 600; }
+.gene { font-style: italic; }
 @media (max-width: 760px) { .pubgroup { grid-template-columns: 1fr; gap: 12px; } }
 
 /* Education */
@@ -378,7 +379,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
         <div class="detail">
           <ul>
             <li>Ran the molecular dynamics for the Wu lab's cardiac fibrosis studies (Cell 2024, Nature 2025), simulating how drug candidates bind their protein targets. We validated that saracatinib binds Src kinase more strongly and stably than the other candidates tested.</li>
-            <li>Showed with MD and free-energy analysis that two neighbouring KCNC2 epilepsy variants act in opposite directions, gain and loss of function, before experiments confirmed it (HGG Advances 2022).</li>
+            <li>Showed with MD and free-energy analysis that two neighbouring <i class="gene">KCNC2</i> epilepsy variants act in opposite directions, gain and loss of function, before experiments confirmed it (HGG Advances 2022).</li>
             <li>Analyse ligand RMSD, interaction energy, residue flexibility (RMSF) and pocket volume across replicate simulations to rank binders.</li>
             <li>Dock against kinase structures with AutoDock Vina, with tautomer-aware ligand preparation, for off-target and selectivity profiling.</li>
           </ul>
@@ -395,7 +396,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <ul>
             <li>Built DiGePred (AJHG 2021), a random forest that predicts digenic disease gene pairs, and applied it to 100+ undiagnosed patients and several rare disease cohorts.</li>
             <li>Contributed to identifying a new candidate gene pair for Mayer-Rokitansky-Küster-Hauser syndrome (Human Genetics 2021).</li>
-            <li>Used patient-specific structural modeling to explain why two KCNC2 variants two residues apart cause different epilepsy phenotypes.</li>
+            <li>Used patient-specific structural modeling to explain why two <i class="gene">KCNC2</i> variants two residues apart cause different epilepsy phenotypes.</li>
             <li>Built the genome analysis pipeline for the Stanford Cardiovascular Institute iPSC biobank: sample identity, data quality, genetic ancestry and pathogenic variant annotation.</li>
             <li>Built a SLURM whole-genome sequencing pipeline with multi-lane input, GATK4 joint genotyping, VEP annotation, separate 30x and low-coverage CNV branches, and resume after failure.</li>
           </ul>
@@ -443,7 +444,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
         <div class="detail">
           <ul>
             <li>Led a team on a contract research project for a non-profit patient foundation, modelling Alexander disease in patient-derived iPSC lines. I did the differentiation into neural progenitors and astrocytes, the culture and the imaging.</li>
-            <li>At inStem and NCBS in Bengaluru, purified sarcomeric proteins, reconstituted filaments in vitro and ran functional assays on tropomyosin and troponin T mutations, predicting which domains lean toward hypertrophic or dilated cardiomyopathy (PNAS 2017).</li>
+            <li>At inStem and NCBS in Bengaluru, purified sarcomeric proteins, reconstituted filaments <i>in vitro</i> and ran functional assays on tropomyosin and troponin T mutations, predicting which domains lean toward hypertrophic or dilated cardiomyopathy (PNAS 2017).</li>
             <li>Earlier training in the Stem Cell Facility at AIIMS New Delhi and the Tissue Engineering Group at IIT Delhi.</li>
             <li>Co-wrote the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10617761/">JCI 2023 review</a> on the FDA Modernization Act 2.0 and how human cells, organoids and AI/ML can replace animal models in safety testing.</li>
           </ul>
@@ -574,7 +575,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
         <div class="tile-text">
           <p class="meta mono"><strong>HGG Advances 2022</strong> First author</p>
           <h3>Personalized structural biology for epilepsy variants</h3>
-          <p>Two de novo variants two residues apart in the KCNC2 (Kv3.2) potassium channel caused different forms of developmental epileptic encephalopathy. Using molecular dynamics and free-energy analysis, I showed that V471L acts as gain of function and V469L as loss of function, because V469L constricts the pore and raises the barrier for potassium ions.</p>
+          <p>Two <i>de novo</i> variants two residues apart in the <i class="gene">KCNC2</i> (Kv3.2) potassium channel caused different forms of developmental epileptic encephalopathy. Using molecular dynamics and free-energy analysis, I showed that V471L acts as gain of function and V469L as loss of function, because V469L constricts the pore and raises the barrier for potassium ions.</p>
           <p>I led the investigation across clinicians, biochemists and electrophysiologists, and their experiments later confirmed both predictions.</p>
           <div class="links">
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">HGG Advances paper</a>
@@ -644,11 +645,11 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <p class="meta mono"><strong>Stem Cell Research 2026</strong> Co-author</p>
           <h3>Whole-genome QC for patient-derived iPSC lines</h3>
           <p>Before anyone builds a disease model on a new patient iPSC line, the line has to be shown to be the right donor and genomically intact. I built and run the genome analysis for the Stanford Cardiovascular Institute iPSC biobank: it confirms sample identity, checks sequencing quality, infers genetic ancestry, annotates pathogenic variants, and screens for copy number changes the cells picked up in culture.</p>
-          <p>That QC supports the lab's published iPSC line reports, including lines from Fabry disease patients carrying GLA mutations, from patients with thoracic aortic aneurysm carrying ACTA2 mutations, and from hereditary hemorrhagic telangiectasia patients carrying ACVRL1 mutations.</p>
+          <p>That QC supports the lab's published iPSC line reports, including lines from Fabry disease patients carrying <i class="gene">GLA</i> mutations, from patients with thoracic aortic aneurysm carrying <i class="gene">ACTA2</i> mutations, and from hereditary hemorrhagic telangiectasia patients carrying <i class="gene">ACVRL1</i> mutations.</p>
           <div class="links">
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13618801/">Fabry disease lines</a>
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12767169/">ACTA2 aneurysm lines</a>
-            <a href="https://doi.org/10.1016/j.scr.2026.104095">ACVRL1 telangiectasia lines</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12767169/"><i class="gene">ACTA2</i> aneurysm lines</a>
+            <a href="https://doi.org/10.1016/j.scr.2026.104095"><i class="gene">ACVRL1</i> telangiectasia lines</a>
           </div>
         </div>
         <figure class="fig-wide">
@@ -677,7 +678,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
             <li>Developing a personalized cardiotoxicity atlas that predicts drug-induced cardiotoxicity from interactions between drugs and patients' genetic variants.</li>
             <li>Develop multi-modal integration pipelines across RNA-seq, proteomics and phenotypic assays for biomarker discovery.</li>
             <li>Ran the molecular dynamics simulations of drug candidates binding their targets for the lab's cardiac fibrosis studies (Cell 2024, Nature 2025), including validating strong saracatinib binding to Src kinase.</li>
-            <li>Connect in vitro cellular phenotypes to clinical endpoints, and mentor junior researchers.</li>
+            <li>Connect <i>in vitro</i> cellular phenotypes to clinical endpoints, and mentor junior researchers.</li>
           </ul>
         </div>
       </div>
@@ -708,7 +709,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <p class="note">Co-mentored by Tony Capra and Jens Meiler.</p>
           <ul>
             <li>Developed DiGePred for digenic disease prediction with the Undiagnosed Diseases Network, applied to more than 100 patients.</li>
-            <li>Led a team of clinicians, biochemists and electrophysiologists investigating two neighbouring de novo KCNC2 variants that cause developmental epileptic encephalopathy. My molecular dynamics resolved their opposite mechanisms, which the team then confirmed experimentally.</li>
+            <li>Led a team of clinicians, biochemists and electrophysiologists investigating two neighbouring <i>de novo</i> <i class="gene">KCNC2</i> variants that cause developmental epileptic encephalopathy. My molecular dynamics resolved their opposite mechanisms, which the team then confirmed experimentally.</li>
           </ul>
         </div>
       </div>
@@ -719,7 +720,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <h3>Working across disciplines</h3>
           <p class="org">The teams behind the projects above</p>
           <ul>
-            <li>Led the KCNC2 investigation across clinicians, biochemists and electrophysiologists at Vanderbilt. My simulations made the prediction, their experiments tested it, and the two agreed.</li>
+            <li>Led the <i class="gene">KCNC2</i> investigation across clinicians, biochemists and electrophysiologists at Vanderbilt. My simulations made the prediction, their experiments tested it, and the two agreed.</li>
             <li>Worked with the Undiagnosed Diseases Network through my PhD and after it, taking DiGePred from a model to a tool applied to 100+ patients, and contributing to the MRKH gene pair with a separate clinical genetics group.</li>
             <li>Lead a team at Greenstone on a contract research project for a non-profit patient foundation, and work day to day with medicinal chemists and external CRO partners to take ranked compounds into synthesis.</li>
             <li>Built ADMET-AI jointly between Greenstone and James Zou's group at Stanford, and contribute the computational arm of the Wu lab's experimental studies, including Cell 2024 and Nature 2025.</li>
@@ -760,7 +761,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
         </li>
         <li>
           <span class="venue">HGG Advances 2022</span>
-          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">Personalized structural biology reveals the molecular mechanisms underlying heterogeneous epileptic phenotypes caused by de novo KCNC2 variants</a>
+          <a class="title" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">Personalized structural biology reveals the molecular mechanisms underlying heterogeneous epileptic phenotypes caused by <i>de novo</i> <i class="gene">KCNC2</i> variants</a>
           <span class="authors"><b>Mukherjee S</b>, Cassini TA, Hu N, et al., Capra JA</span>
         </li>
         <li>
