@@ -126,12 +126,12 @@ header.nav {
 }
 
 /* Facts */
-.facts { padding: 0 0 72px; border-top: 0; }
-.facts dl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border-top: 1px solid var(--line); }
-.facts dl > div { padding: 22px 24px 0 0; }
-.facts dt { font-size: 2rem; font-weight: 600; letter-spacing: -0.03em; }
-.facts dd { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; max-width: 22ch; }
-@media (max-width: 760px) { .facts dl { grid-template-columns: 1fr; row-gap: 8px; } }
+.facts { padding: 0 0 40px; border-top: 0; }
+.facts dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; }
+.facts dl > div { background: var(--surface); border-radius: var(--radius); padding: 16px 20px; text-align: center; }
+.facts dt { font-size: 1.75rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; }
+.facts dd { margin: 4px auto 0; color: var(--muted); font-size: 0.93rem; line-height: 1.4; }
+@media (max-width: 760px) { .facts dl { grid-template-columns: 1fr; gap: 10px; } }
 
 /* Areas */
 .areas { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
