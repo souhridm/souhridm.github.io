@@ -413,7 +413,7 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
       </div>
     </article>
 
-    <article class="case">
+    <article class="case has-fig">
       <div class="meta mono"><strong>AJHG, 2021</strong>First author</div>
       <div>
         <h3>Finding digenic disease genes with machine learning</h3>
@@ -423,9 +423,15 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
           <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">MRKH follow-up</a>
         </div>
       </div>
+      <div class="figs">
+        <figure>
+          <a href="figures/digepred-workflow.jpg"><img src="figures/digepred-workflow.jpg" width="508" height="500" loading="lazy" alt="DiGePred workflow: digenic and non-digenic gene pairs split into training, validation and held-out test sets, a random forest trained with 10-fold cross validation, and evaluation of false positives on 38 unaffected relatives and true positives on 13 new digenic pairs from the literature."></a>
+          <figcaption>DiGePred training and evaluation. Mukherjee et al., AJHG 2021.</figcaption>
+        </figure>
+      </div>
     </article>
 
-    <article class="case">
+    <article class="case has-fig">
       <div class="meta mono"><strong>HGG Advances, 2022</strong>First author</div>
       <div>
         <h3>Personalized structural biology for epilepsy variants</h3>
@@ -433,6 +439,16 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
         <div class="links">
           <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9399384/">HGG Advances paper</a>
         </div>
+      </div>
+      <div class="figs">
+        <figure>
+          <a href="figures/kcnc2-structure-panels-ab.jpg"><img src="figures/kcnc2-structure-panels-ab.jpg" width="656" height="456" loading="lazy" alt="Structural model of the Kv3.2 channel tetramer with the membrane boundaries, the channel pore, and a close-up of residues V469 and V471 in the PVP motif of helix S6."></a>
+          <figcaption>V469 and V471 sit in the PVP motif lining the channel pore.</figcaption>
+        </figure>
+        <figure>
+          <a href="figures/kcnc2-pore-panel-d.jpg"><img src="figures/kcnc2-pore-panel-d.jpg" width="334" height="285" loading="lazy" alt="Pore surface from simulation and a plot of pore radius along the channel axis for wild type, V469L and V471L. V469L narrows the pore near residue 469."></a>
+          <figcaption>Pore radius along the channel in simulation. V469L constricts the pore, raising the barrier for potassium ions. Mukherjee et al., HGG Advances 2022 (CC BY-NC-ND).</figcaption>
+        </figure>
       </div>
     </article>
 
@@ -456,12 +472,12 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.9rem; backgroun
       </div>
       <div class="figs">
         <figure>
-          <a href="figures/src-saracatinib-md.svg"><img class="chart" src="figures/src-saracatinib-md.svg" width="760" height="300" loading="lazy" alt="Bar charts of mean interaction energy and ligand RMSD for five drug candidates bound to Src kinase. Saracatinib has the strongest interaction energy, about minus 278 kJ/mol, and the lowest RMSD, 0.25 nm."></a>
-          <figcaption>Src kinase simulations of five drug candidates, redrawn from my simulation data. Click to enlarge.</figcaption>
+          <a href="figures/nature-2025-fig4h-src-md.jpg"><img src="figures/nature-2025-fig4h-src-md.jpg" width="730" height="594" loading="lazy" alt="Src kinase surface with the starting and ending poses of five drug candidates from molecular dynamics, shown from two angles. Saracatinib stays in the pocket."></a>
+          <figcaption>Starting and ending poses of five candidates in Src kinase over 100 ns of simulation. Cho et al., Nature 2025, Figure 4h.</figcaption>
         </figure>
         <figure>
-          <a href="figures/md2-binding-poses.jpg"><img src="figures/md2-binding-poses.jpg" width="1400" height="677" loading="lazy" alt="Surface of the MD2 protein with simulated binding poses of drug candidates in its pocket."></a>
-          <figcaption>Simulated binding poses of drug candidates in MD2, prepared for the Cell 2024 study.</figcaption>
+          <a href="figures/src-saracatinib-md-barplot.jpg"><img src="figures/src-saracatinib-md-barplot.jpg" width="1966" height="1464" loading="lazy" alt="Bar plots of mean interaction energy and ligand RMSD for five candidates bound to Src kinase. Saracatinib has the strongest interaction energy, about minus 278 kJ/mol, and the lowest ligand RMSD, about 0.25 nm."></a>
+          <figcaption>Mean interaction energy and ligand RMSD per candidate. Saracatinib binds most strongly and most stably. From my Src simulations.</figcaption>
         </figure>
       </div>
     </article>
