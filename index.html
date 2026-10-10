@@ -549,7 +549,8 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <p class="meta mono"><strong>Computer vision</strong> <span class="ongoing">Ongoing</span></p>
           <h3>Scoring cell state from images</h3>
           <p>Alexander disease is caused by mutations in <i class="gene">GFAP</i>, and patient astrocytes look different from healthy ones: the cell body swells and the fine branching processes retract. Shape is the readout, but scoring it by eye across a plate is slow and depends on who is counting.</p>
-          <p>I am training Intel Geti models to detect astrocytes in culture images and sort them into morphological states rather than a single healthy or diseased call, so the same images give a graded measure of how far a line has shifted and whether a treatment moves it back.</p>
+          <p>In a collaboration with Intel, I am training Intel Geti models on microscopy of patient-derived iPSC astrocytes. A first model segments nuclei; the one that matters classifies whole cells into several morphological states rather than a single healthy or diseased call.</p>
+          <p>Training data comes from expert annotation of those states, and the models run on a dedicated Intel workstation. The aim is a graded measure of how far a line has shifted, and whether a treatment moves it back.</p>
         </div>
       </article>
       </div>
