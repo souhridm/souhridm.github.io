@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 504" font-family="Arial, Helvetica, sans-serif" role="img" aria-labelledby="rt rd">
+<title id="rt">Predicted liability profiles for a safe and a cardiotoxic drug</title>
+<desc id="rd">Six-spoke radars, risk outward on a fixed zero to one scale. Rosuvastatin, with no DICT concern, draws a small green polygon with a mean liability of 0.19. Dronedarone, with most DICT concern, draws a large red polygon with a mean liability of 0.74, high on hERG blockade, CYP2D6 inhibition and P-glycoprotein.</desc>
+<rect width="410" height="504" fill="#ffffff"/>
+<line x1="12" y1="252" x2="398" y2="252" stroke="#d4d6db"/>
+<polygon points="205.0,126.0 218.9,134.0 218.9,150.0 205.0,158.0 191.1,150.0 191.1,134.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,110.0 232.7,126.0 232.7,158.0 205.0,174.0 177.3,158.0 177.3,126.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,94.0 246.6,118.0 246.6,166.0 205.0,190.0 163.4,166.0 163.4,118.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,78.0 260.4,110.0 260.4,174.0 205.0,206.0 149.6,174.0 149.6,110.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="142.0" x2="205.0" y2="78.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="142.0" x2="260.4" y2="110.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="142.0" x2="260.4" y2="174.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="142.0" x2="205.0" y2="206.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="142.0" x2="149.6" y2="174.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="142.0" x2="149.6" y2="110.0" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,120.9 210.8,138.6 208.0,143.8 205.0,174.6 201.2,144.2 200.2,139.2" fill="#2F7D5F" fill-opacity="0.35" stroke="#2F7D5F" stroke-width="1.6"/>
+<text x="205.0" y="58.8" text-anchor="middle" font-size="10.5" dominant-baseline="middle" fill="#52525b">hERG blockade 0.33</text>
+<text x="277.1" y="100.4" text-anchor="start" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP2D6 inhibition 0.10</text>
+<text x="277.1" y="183.6" text-anchor="start" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP2D6 substrate 0.06</text>
+<text x="205.0" y="225.2" text-anchor="middle" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP3A4 substrate 0.51</text>
+<text x="132.9" y="183.6" text-anchor="end" font-size="10.5" dominant-baseline="middle" fill="#52525b">P-gp substrate 0.07</text>
+<text x="132.9" y="100.4" text-anchor="end" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP1A2 inhibition 0.09</text>
+<text x="12" y="20" font-size="14" font-weight="bold" fill="#18181b">Rosuvastatin</text>
+<text x="12" y="36" font-size="11" fill="#52525b">no DICT concern, mean liability 0.19</text>
+<polygon points="205.0,378.0 218.9,386.0 218.9,402.0 205.0,410.0 191.1,402.0 191.1,386.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,362.0 232.7,378.0 232.7,410.0 205.0,426.0 177.3,410.0 177.3,378.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,346.0 246.6,370.0 246.6,418.0 205.0,442.0 163.4,418.0 163.4,370.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,330.0 260.4,362.0 260.4,426.0 205.0,458.0 149.6,426.0 149.6,362.0" fill="none" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="394.0" x2="205.0" y2="330.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="394.0" x2="260.4" y2="362.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="394.0" x2="260.4" y2="426.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="394.0" x2="205.0" y2="458.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="394.0" x2="149.6" y2="426.0" stroke="#d4d6db" stroke-width="1"/>
+<line x1="205.0" y1="394.0" x2="149.6" y2="362.0" stroke="#d4d6db" stroke-width="1"/>
+<polygon points="205.0,331.1 252.4,366.6 224.4,405.2 205.0,445.2 150.6,425.4 178.9,379.0" fill="#A33A3A" fill-opacity="0.35" stroke="#A33A3A" stroke-width="1.6"/>
+<text x="205.0" y="310.8" text-anchor="middle" font-size="10.5" dominant-baseline="middle" fill="#52525b">hERG blockade 0.98</text>
+<text x="277.1" y="352.4" text-anchor="start" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP2D6 inhibition 0.86</text>
+<text x="277.1" y="435.6" text-anchor="start" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP2D6 substrate 0.35</text>
+<text x="205.0" y="477.2" text-anchor="middle" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP3A4 substrate 0.80</text>
+<text x="132.9" y="435.6" text-anchor="end" font-size="10.5" dominant-baseline="middle" fill="#52525b">P-gp substrate 0.98</text>
+<text x="132.9" y="352.4" text-anchor="end" font-size="10.5" dominant-baseline="middle" fill="#52525b">CYP1A2 inhibition 0.47</text>
+<text x="12" y="272" font-size="14" font-weight="bold" fill="#18181b">Dronedarone</text>
+<text x="12" y="288" font-size="11" fill="#52525b">most DICT concern, mean liability 0.74</text>
+</svg>
