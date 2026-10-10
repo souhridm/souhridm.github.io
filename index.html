@@ -491,20 +491,6 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
       </article>
       <article class="tile">
         <figure>
-          <a href="figures/fibrosis-forest-plot.svg"><img src="figures/fibrosis-forest-plot.svg" width="640" height="420" loading="lazy" alt="Forest plot of one candidate gene across 13 public fibrosis cohorts. Every cohort shows higher expression in fibrotic tissue than controls, and the pooled effect size is about 1.9."></a>
-          <figcaption>Example meta-analysis for one candidate gene. Gene and study names are withheld while the work is in progress.</figcaption>
-        </figure>
-        <div class="tile-text">
-          <p class="meta mono"><strong>AI-driven fibrosis drug discovery</strong> <span class="ongoing">Ongoing</span></p>
-          <h3>A human pan-fibrosis atlas for targets and drugs</h3>
-          <p>Fibrosis drives organ failure in the lung, liver, kidney, skin, heart, gut and pancreas. I am analysing public human RNA-seq datasets organ by organ and pooling effect sizes across studies, to find the program the organs share and the protein targets behind it.</p>
-          <p>LINCS perturbation signatures and other approaches then rank drugs that reverse the fibrotic signature. Rankings will be benchmarked on known antifibrotics such as nintedanib and pirfenidone before they are trusted.</p>
-        </div>
-      </article>
-      </div>
-      <div class="tile-col">
-      <article class="tile">
-        <figure>
           <a href="figures/nature-2025-fig4h-src-md.jpg"><img src="figures/nature-2025-fig4h-src-md.jpg" width="730" height="594" loading="lazy" alt="Src kinase surface with the starting and ending poses of five drug candidates from molecular dynamics, shown from two angles."></a>
           <figcaption>Starting and ending poses of five candidates in Src kinase over 100 ns. Cho et al., Nature 2025, Figure 4h.</figcaption>
         </figure>
@@ -523,17 +509,47 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           </div>
         </div>
       </article>
+      </div>
+      <div class="tile-col">
       <article class="tile">
         <figure>
-          <video src="figures/ipsc-cm-calcium-imaging.mp4" poster="figures/ipsc-cm-calcium-imaging-poster.jpg" width="604" height="318" autoplay muted loop playsinline preload="metadata" aria-label="Calcium imaging of seven beating cardiac organoids, each outlined and numbered, with its calcium trace and beat rate beside the field."></video>
-          <figcaption>Seven organoids in one field, each segmented, coloured by calcium level and traced on the right. Shown at half speed.</figcaption>
+          <a href="figures/digepred-workflow.jpg"><img src="figures/digepred-workflow.jpg" width="508" height="500" loading="lazy" alt="DiGePred workflow: digenic and non-digenic gene pairs split into training, validation and held-out test sets, a random forest trained with 10-fold cross validation, and evaluation of false positives on 38 unaffected relatives and true positives on 13 new digenic pairs from the literature."></a>
+          <figcaption>DiGePred training and evaluation. Mukherjee et al., AJHG 2021.</figcaption>
         </figure>
         <div class="tile-text">
-          <p class="meta mono"><strong>iPSC-CM data analysis</strong> <span class="ongoing">Ongoing</span></p>
-          <h3>Calcium imaging analysis for iPSC cardiomyocytes</h3>
-          <p>A Python pipeline for calcium optical imaging of iPSC-derived cardiomyocyte organoids and monolayers in 96-well plates. It segments each organoid, extracts its calcium transient, and measures beat rate, amplitude, transient duration (CaTD50, CaTD80, CaTD90), upstroke and decay kinetics, beat-to-beat variability and synchrony.</p>
-          <p>Drug responses are normalised to vehicle wells, so arrhythmia and line-to-line differences show up per plate. It reads two microscope formats, including 100 fps recordings with light-source flicker removed, and an interactive plate explorer and Streamlit app let biologists review every well.</p>
-          <p>The readouts are the ones that matter for cardiac safety. A hERG blocker such as dofetilide lengthens the calcium transient and pushes wells into irregular beating, and the pipeline reports that as a shift against the vehicle rows on the same plate.</p>
+          <p class="meta mono"><strong>AJHG 2021</strong> First author</p>
+          <h3>Finding digenic disease genes with machine learning</h3>
+          <p>Some rare diseases are caused by variants in two genes acting together, which single-gene analysis misses. I built DiGePred, a random forest that predicts digenic disease gene pairs, trained with 10-fold cross validation on a set where non-digenic pairs outnumber digenic ones about 75 to 1.</p>
+          <p>False positives were checked on gene pairs from 38 unaffected relatives and true positives on 13 new digenic pairs from the literature. With the Undiagnosed Diseases Network it was applied to 100+ undiagnosed patients, and it contributed to a new candidate gene pair for Mayer-Rokitansky-Küster-Hauser syndrome.</p>
+          <p>The features behind each prediction are biological rather than statistical: how close two genes sit in protein interaction and pathway networks, whether they are expressed in the same tissues, and how their evolutionary histories compare.</p>
+          <div class="links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8546038/">AJHG paper</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">MRKH follow-up</a>
+          </div>
+        </div>
+      </article>
+      <article class="tile">
+        <figure>
+          <a href="figures/rnaseq-volcano.png"><img src="figures/rnaseq-volcano.png" width="1144" height="880" loading="lazy" alt="Volcano plot of a differential expression analysis. Log2 fold change on the x axis against minus log10 adjusted p on the y axis, with 596 significantly down genes in blue on the left and 432 up genes in red on the right, and the non-significant majority in grey around the origin."></a>
+          <figcaption>One differential expression comparison: 6,528 genes tested, 596 down and 432 up past twofold at 5% FDR. The dataset is not named while the work is unpublished.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>Across projects</strong> <span class="ongoing">Ongoing</span></p>
+          <h3>Finding targets in transcriptomic data</h3>
+          <p>Most target work starts with a differential expression table. I run RNA-seq from public cohorts and from in-house experiments through DESeq2, then read the result as a volcano: how many genes move, how far, and how confidently.</p>
+          <p>Enrichment over GO terms and pathways then says what the moving genes have in common, and intersecting a disease signature with a compound's signature nominates both targets and repurposing candidates. The same workflow sits behind the pulmonary fibrosis and rheumatoid arthritis analyses described elsewhere on this page.</p>
+        </div>
+      </article>
+      <article class="tile">
+        <figure>
+          <a href="figures/astrocyte-morphology-states.svg"><img src="figures/astrocyte-morphology-states.svg" width="500" height="250" loading="lazy" alt="Schematic of two astrocyte shapes. A healthy astrocyte with a small cell body and many fine branching processes is tagged ramified; an Alexander disease astrocyte with a large round cell body and a few short processes is tagged rounded. Each sits in a dashed detection box."></a>
+          <figcaption>The two morphologies the model has to tell apart.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>Computer vision</strong> <span class="ongoing">Ongoing</span></p>
+          <h3>Scoring cell state from images</h3>
+          <p>Alexander disease is caused by mutations in <i class="gene">GFAP</i>, and patient astrocytes look different from healthy ones: the cell body swells and the fine branching processes retract. Shape is the readout, but scoring it by eye across a plate is slow and depends on who is counting.</p>
+          <p>I am training Intel Geti models to detect astrocytes in culture images and sort them into morphological states rather than a single healthy or diseased call, so the same images give a graded measure of how far a line has shifted and whether a treatment moves it back.</p>
         </div>
       </article>
       </div>
@@ -559,19 +575,27 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
       </article>
       <article class="tile">
         <figure>
-          <a href="figures/digepred-workflow.jpg"><img src="figures/digepred-workflow.jpg" width="508" height="500" loading="lazy" alt="DiGePred workflow: digenic and non-digenic gene pairs split into training, validation and held-out test sets, a random forest trained with 10-fold cross validation, and evaluation of false positives on 38 unaffected relatives and true positives on 13 new digenic pairs from the literature."></a>
-          <figcaption>DiGePred training and evaluation. Mukherjee et al., AJHG 2021.</figcaption>
+          <video src="figures/ipsc-cm-calcium-imaging.mp4" poster="figures/ipsc-cm-calcium-imaging-poster.jpg" width="604" height="318" autoplay muted loop playsinline preload="metadata" aria-label="Calcium imaging of seven beating cardiac organoids, each outlined and numbered, with its calcium trace and beat rate beside the field."></video>
+          <figcaption>Seven organoids in one field, each segmented, coloured by calcium level and traced on the right. Shown at half speed.</figcaption>
         </figure>
         <div class="tile-text">
-          <p class="meta mono"><strong>AJHG 2021</strong> First author</p>
-          <h3>Finding digenic disease genes with machine learning</h3>
-          <p>Some rare diseases are caused by variants in two genes acting together, which single-gene analysis misses. I built DiGePred, a random forest that predicts digenic disease gene pairs, trained with 10-fold cross validation on a set where non-digenic pairs outnumber digenic ones about 75 to 1.</p>
-          <p>False positives were checked on gene pairs from 38 unaffected relatives and true positives on 13 new digenic pairs from the literature. With the Undiagnosed Diseases Network it was applied to 100+ undiagnosed patients, and it contributed to a new candidate gene pair for Mayer-Rokitansky-Küster-Hauser syndrome.</p>
-          <p>The features behind each prediction are biological rather than statistical: how close two genes sit in protein interaction and pathway networks, whether they are expressed in the same tissues, and how their evolutionary histories compare.</p>
-          <div class="links">
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8546038/">AJHG paper</a>
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">MRKH follow-up</a>
-          </div>
+          <p class="meta mono"><strong>iPSC-CM data analysis</strong> <span class="ongoing">Ongoing</span></p>
+          <h3>Calcium imaging analysis for iPSC cardiomyocytes</h3>
+          <p>A Python pipeline for calcium optical imaging of iPSC-derived cardiomyocyte organoids and monolayers in 96-well plates. It segments each organoid, extracts its calcium transient, and measures beat rate, amplitude, transient duration (CaTD50, CaTD80, CaTD90), upstroke and decay kinetics, beat-to-beat variability and synchrony.</p>
+          <p>Drug responses are normalised to vehicle wells, so arrhythmia and line-to-line differences show up per plate. It reads two microscope formats, including 100 fps recordings with light-source flicker removed, and an interactive plate explorer and Streamlit app let biologists review every well.</p>
+          <p>The readouts are the ones that matter for cardiac safety. A hERG blocker such as dofetilide lengthens the calcium transient and pushes wells into irregular beating, and the pipeline reports that as a shift against the vehicle rows on the same plate.</p>
+        </div>
+      </article>
+      <article class="tile">
+        <figure>
+          <a href="figures/fibrosis-forest-plot.svg"><img src="figures/fibrosis-forest-plot.svg" width="640" height="420" loading="lazy" alt="Forest plot of one candidate gene across 13 public fibrosis cohorts. Every cohort shows higher expression in fibrotic tissue than controls, and the pooled effect size is about 1.9."></a>
+          <figcaption>Example meta-analysis for one candidate gene. Gene and study names are withheld while the work is in progress.</figcaption>
+        </figure>
+        <div class="tile-text">
+          <p class="meta mono"><strong>AI-driven fibrosis drug discovery</strong> <span class="ongoing">Ongoing</span></p>
+          <h3>A human pan-fibrosis atlas for targets and drugs</h3>
+          <p>Fibrosis drives organ failure in the lung, liver, kidney, skin, heart, gut and pancreas. I am analysing public human RNA-seq datasets organ by organ and pooling effect sizes across studies, to find the program the organs share and the protein targets behind it.</p>
+          <p>LINCS perturbation signatures and other approaches then rank drugs that reverse the fibrotic signature. Rankings will be benchmarked on known antifibrotics such as nintedanib and pirfenidone before they are trusted.</p>
         </div>
       </article>
       </div>
