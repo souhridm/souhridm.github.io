@@ -542,15 +542,14 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
       </article>
       <article class="tile">
         <figure>
-          <a href="figures/astrocyte-morphology-states.svg"><img src="figures/astrocyte-morphology-states.svg" width="500" height="250" loading="lazy" alt="Schematic of two astrocyte shapes. A healthy astrocyte with a small cell body and many fine branching processes is tagged ramified; an Alexander disease astrocyte with a large round cell body and a few short processes is tagged rounded. Each sits in a dashed detection box."></a>
-          <figcaption>The two morphologies the model has to tell apart.</figcaption>
+          <a href="figures/astrocyte-morphology-states.svg"><img src="figures/astrocyte-morphology-states.svg" width="500" height="252" loading="lazy" alt="Schematic of two astrocyte shapes. A healthy astrocyte with a small cell body and many fine branching processes is tagged ramified; an Alexander disease astrocyte with a large round cell body and a few short processes is tagged rounded. Each sits in a dashed detection box."></a>
+          <figcaption>The two morphologies the model has to tell apart. Schematic, after the phenotype described by <a href="https://doi.org/10.1111/cns.70240">Yi et al., CNS Neuroscience and Therapeutics 2025</a>.</figcaption>
         </figure>
         <div class="tile-text">
           <p class="meta mono"><strong>Computer vision</strong> <span class="ongoing">Ongoing</span></p>
           <h3>Scoring cell state from images</h3>
-          <p>Alexander disease is caused by mutations in <i class="gene">GFAP</i>, and patient astrocytes look different from healthy ones: the cell body swells and the fine branching processes retract. Shape is the readout, but scoring it by eye across a plate is slow and depends on who is counting.</p>
-          <p>In a collaboration with Intel, I am training Intel Geti models on microscopy of patient-derived iPSC astrocytes. A first model segments nuclei; the one that matters classifies whole cells into several morphological states rather than a single healthy or diseased call.</p>
-          <p>Training data comes from expert annotation of those states, and the models run on a dedicated Intel workstation. The aim is a graded measure of how far a line has shifted, and whether a treatment moves it back.</p>
+          <p>Alexander disease is caused by mutations in <i class="gene">GFAP</i>, and patient astrocytes change shape: the cell body swells and the fine processes retract. Scoring that by eye across a plate is slow and depends on who is counting.</p>
+          <p>With Intel, I am training Intel Geti models on microscopy of patient-derived iPSC astrocytes. One segments nuclei, the other sorts whole cells into several morphological states rather than a single healthy or diseased call, giving a graded measure of how far a line has shifted and whether a treatment moves it back.</p>
         </div>
       </article>
       </div>

@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250" font-family="Arial, Helvetica, sans-serif" role="img" aria-labelledby="at ad">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 252" font-family="Arial, Helvetica, sans-serif" role="img" aria-labelledby="at ad">
 <title id="at">Two astrocyte morphologies a vision model separates</title>
-<desc id="ad">Left, a healthy astrocyte drawn with a small cell body and many fine branching processes, labelled ramified. Right, an Alexander disease astrocyte drawn with a large round cell body and a few short processes, labelled rounded. Each sits inside a dashed detection box.</desc>
-<rect width="500" height="250" fill="#ffffff"/>
-<text x="125" y="22" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#18181b">Healthy astrocyte</text>
-<path d="M140.0,139.0 Q160.6,146.6 180.1,136.5" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M164.9,137.5 Q171.4,133.0 178.0,128.5" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M164.9,137.5 Q173.1,141.4 181.3,145.3" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M137.9,147.7 Q152.5,168.2 177.5,171.4" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M162.4,162.4 Q173.1,164.0 183.7,165.6" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M162.4,162.4 Q167.9,169.8 173.3,177.2" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M128.0,154.7 Q122.1,182.1 138.3,205.1" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M134.4,185.9 Q140.7,194.9 146.9,203.8" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M134.4,185.9 Q129.7,199.8 124.9,213.6" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M117.1,152.8 Q97.2,166.5 93.9,190.5" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M102.8,176.2 Q103.3,184.8 103.8,193.4" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M102.8,176.2 Q94.0,180.2 85.2,184.3" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M111.7,146.9 Q90.0,148.2 76.4,165.1" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M89.8,158.2 Q83.4,166.8 77.0,175.5" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M89.8,158.2 Q80.0,158.7 70.2,159.2" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M111.2,134.2 Q94.7,116.7 70.7,117.1" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M86.1,123.6 Q77.5,124.6 69.0,125.5" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M86.1,123.6 Q79.6,117.0 73.1,110.4" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M118.4,126.6 Q117.3,102.1 98.5,86.4" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M106.1,101.6 Q97.2,94.8 88.4,88.0" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M106.1,101.6 Q106.4,91.8 106.7,81.9" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M129.2,125.6 Q146.4,104.9 142.8,78.2" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M137.6,96.2 Q135.7,84.2 133.8,72.1" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M137.6,96.2 Q147.3,86.6 157.0,76.9" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M137.2,131.3 Q160.0,126.7 171.9,106.8" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M158.8,116.1 Q161.6,108.0 164.5,100.0" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<path d="M158.8,116.1 Q169.9,114.6 181.1,113.1" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
-<circle cx="125" cy="140" r="15" fill="#9fb6e8" fill-opacity="0.5" stroke="#9fb6e8" stroke-width="2"/>
-<circle cx="125" cy="140" r="5.7" fill="#9fb6e8" fill-opacity="0.75" stroke="none"/>
-<rect x="42" y="56" width="166" height="166" fill="none" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5 4" rx="3"/>
-<rect x="42" y="39" width="82.0" height="17" fill="#1d4ed8" rx="2"/>
-<text x="83.0" y="51" text-anchor="middle" font-size="10.5" fill="#ffffff">ramified</text>
-<text x="375" y="22" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#18181b">AxD astrocyte</text>
-<path d="M404.0,139.5 Q412.7,143.2 421.4,139.2" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M370.6,168.7 Q365.7,176.4 368.0,185.3" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M346.0,139.9 Q337.2,136.0 328.5,139.9" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M371.7,111.2 Q374.5,102.3 369.8,94.2" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
-<circle cx="375" cy="140" r="29" fill="#d9a3a3" fill-opacity="0.5" stroke="#d9a3a3" stroke-width="2"/>
-<circle cx="375" cy="140" r="11.0" fill="#d9a3a3" fill-opacity="0.75" stroke="none"/>
-<rect x="324" y="86" width="102" height="106" fill="none" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5 4" rx="3"/>
-<rect x="324" y="69" width="73.5" height="17" fill="#1d4ed8" rx="2"/>
-<text x="360.8" y="81" text-anchor="middle" font-size="10.5" fill="#ffffff">rounded</text>
-<text x="250.0" y="240" text-anchor="middle" font-size="11" fill="#52525b">schematic, not imaging data</text>
+<desc id="ad">Left, a healthy astrocyte drawn with a small cell body and many fine branching processes, labelled ramified. Right, an Alexander disease astrocyte drawn with a large round cell body and a few short processes, labelled rounded. Both sit in detection boxes of the same size.</desc>
+<rect width="500" height="252" fill="#ffffff"/>
+<text x="125" y="24" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#18181b">Healthy astrocyte</text>
+<path d="M139.0,146.1 Q156.9,152.7 173.9,143.9" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M160.6,144.7 Q165.7,141.3 170.8,137.8" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M160.6,144.7 Q167.0,147.8 173.4,150.9" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M137.0,154.2 Q149.7,172.1 171.4,174.8" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M158.4,166.9 Q166.6,168.2 174.9,169.5" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M158.4,166.9 Q162.6,172.7 166.8,178.5" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M127.8,160.7 Q122.6,184.6 136.8,204.5" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M133.4,187.9 Q138.2,194.8 143.1,201.8" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M133.4,187.9 Q129.7,198.7 126.0,209.5" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M117.7,158.9 Q100.4,170.9 97.5,191.7" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M105.2,179.3 Q105.6,186.0 106.0,192.7" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M105.2,179.3 Q98.3,182.4 91.5,185.6" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M112.6,153.4 Q93.8,154.6 81.9,169.3" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M93.6,163.3 Q88.6,170.0 83.5,176.7" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M93.6,163.3 Q85.9,163.7 78.2,164.1" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M112.1,141.6 Q97.8,126.4 76.9,126.7" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M90.3,132.4 Q83.6,133.1 77.0,133.9" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M90.3,132.4 Q85.3,127.2 80.2,122.1" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M118.8,134.4 Q117.9,113.2 101.6,99.5" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M108.1,112.8 Q101.2,107.5 94.4,102.2" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M108.1,112.8 Q108.3,105.1 108.6,97.4" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M128.9,133.5 Q143.9,115.6 140.7,92.4" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M136.2,108.0 Q134.7,98.6 133.2,89.2" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M136.2,108.0 Q143.8,100.5 151.3,92.9" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M136.4,138.9 Q156.2,134.9 166.6,117.6" fill="none" stroke="#9fb6e8" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M155.1,125.7 Q157.4,119.4 159.6,113.1" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M155.1,125.7 Q163.9,124.5 172.6,123.3" fill="none" stroke="#9fb6e8" stroke-width="1.3" stroke-linecap="round"/>
+<circle cx="125" cy="147.0" r="14" fill="#9fb6e8" fill-opacity="0.5" stroke="#9fb6e8" stroke-width="2"/>
+<circle cx="125" cy="147.0" r="5.3" fill="#9fb6e8" fill-opacity="0.75" stroke="none"/>
+<rect x="50.0" y="72" width="150" height="150" fill="none" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5 4" rx="3"/>
+<rect x="50.0" y="55" width="80" height="17" fill="#1d4ed8" rx="2"/>
+<text x="90.2" y="67" text-anchor="middle" font-size="10.5" fill="#ffffff">ramified</text>
+<text x="375" y="24" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#18181b">AxD astrocyte</text>
+<path d="M403.0,146.5 Q411.2,150.0 419.3,146.2" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M370.7,174.7 Q366.1,182.0 368.3,190.3" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M347.0,146.9 Q338.8,143.3 330.5,146.9" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M371.8,119.2 Q374.4,110.8 370.0,103.2" fill="none" stroke="#d9a3a3" stroke-width="2.4" stroke-linecap="round"/>
+<circle cx="375" cy="147.0" r="28" fill="#d9a3a3" fill-opacity="0.5" stroke="#d9a3a3" stroke-width="2"/>
+<circle cx="375" cy="147.0" r="10.6" fill="#d9a3a3" fill-opacity="0.75" stroke="none"/>
+<rect x="300.0" y="72" width="150" height="150" fill="none" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5 4" rx="3"/>
+<rect x="300.0" y="55" width="72" height="17" fill="#1d4ed8" rx="2"/>
+<text x="336.1" y="67" text-anchor="middle" font-size="10.5" fill="#ffffff">rounded</text>
+<text x="250.0" y="243" text-anchor="middle" font-size="11" fill="#52525b">schematic, not imaging data</text>
 </svg>
