@@ -533,6 +533,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <h3>Calcium imaging analysis for iPSC cardiomyocytes</h3>
           <p>A Python pipeline for calcium optical imaging of iPSC-derived cardiomyocyte organoids and monolayers in 96-well plates. It segments each organoid, extracts its calcium transient, and measures beat rate, amplitude, transient duration (CaTD50, CaTD80, CaTD90), upstroke and decay kinetics, beat-to-beat variability and synchrony.</p>
           <p>Drug responses are normalised to vehicle wells, so arrhythmia and line-to-line differences show up per plate. It reads two microscope formats, including 100 fps recordings with light-source flicker removed, and an interactive plate explorer and Streamlit app let biologists review every well.</p>
+          <p>The readouts are the ones that matter for cardiac safety. A hERG blocker such as dofetilide lengthens the calcium transient and pushes wells into irregular beating, and the pipeline reports that as a shift against the vehicle rows on the same plate.</p>
         </div>
       </article>
       </div>
@@ -566,6 +567,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <h3>Finding digenic disease genes with machine learning</h3>
           <p>Some rare diseases are caused by variants in two genes acting together, which single-gene analysis misses. I built DiGePred, a random forest that predicts digenic disease gene pairs, trained with 10-fold cross validation on a set where non-digenic pairs outnumber digenic ones about 75 to 1.</p>
           <p>False positives were checked on gene pairs from 38 unaffected relatives and true positives on 13 new digenic pairs from the literature. With the Undiagnosed Diseases Network it was applied to 100+ undiagnosed patients, and it contributed to a new candidate gene pair for Mayer-Rokitansky-Küster-Hauser syndrome.</p>
+          <p>The features behind each prediction are biological rather than statistical: how close two genes sit in protein interaction and pathway networks, whether they are expressed in the same tissues, and how their evolutionary histories compare.</p>
           <div class="links">
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8546038/">AJHG paper</a>
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9211441/">MRKH follow-up</a>
