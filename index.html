@@ -469,12 +469,12 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
       <div class="tile-col">
       <article class="tile">
         <figure>
-          <a href="figures/admet-ai-dict-workflow.jpg"><img src="figures/admet-ai-dict-workflow.jpg" width="1507" height="1265" loading="lazy" alt="Workflow diagram: 555 DICTRank drugs, 262 non-cardiotoxic and 293 most cardiotoxic, feed ADMET-AI predictions of 41 properties, then an XGBoost classifier, then model and feature interpretation with SHAP values, clustering and radar plots."></a>
+          <a href="figures/admet-ai-dict-workflow.jpg"><img src="figures/admet-ai-dict-workflow.jpg" width="1483" height="1369" loading="lazy" alt="Workflow diagram: 555 DICTRank drugs, 262 non-cardiotoxic and 293 most cardiotoxic, feed ADMET-AI predictions of 41 properties, then an XGBoost classifier, then model and feature interpretation with SHAP values, clustering and radar plots."></a>
           <figcaption>How the cardiotoxicity model is built. Mukherjee et al., Circulation 2025, panel A.</figcaption>
         </figure>
         <figure>
-          <a href="figures/admet-ai-liability-radars.svg"><img src="figures/admet-ai-liability-radars.svg" width="410" height="504" loading="lazy" alt="Two six-spoke radar plots of predicted liabilities, risk outward on a fixed zero to one scale. Rosuvastatin, with no DICT concern, draws a small green polygon, mean liability 0.19. Dronedarone, with most DICT concern, draws a large red polygon, mean liability 0.74, high on hERG blockade, CYP2D6 inhibition and P-glycoprotein."></a>
-          <figcaption>Predicted liabilities for two cardiovascular drugs, drawn from the model inputs. Risk points outward on a fixed scale, so a clean drug is a small polygon.</figcaption>
+          <a href="figures/admet-ai-liability-radars.svg"><img src="figures/admet-ai-liability-radars.svg" width="410" height="236" loading="lazy" alt="Two six-spoke radar plots of predicted liabilities, risk outward on a fixed zero to one scale. Rosuvastatin, with no DICT concern, draws a small green polygon, mean liability 0.19. Dronedarone, with most DICT concern, draws a large red polygon, mean liability 0.74, high on hERG blockade, CYP2D6 inhibition and P-glycoprotein."></a>
+          <figcaption>Predicted liabilities for two cardiovascular drugs, from the model inputs. Six axes, clockwise from the top: hERG blockade, CYP2D6 inhibition, CYP2D6 substrate, CYP3A4 substrate, P-gp substrate, CYP1A2 inhibition. Risk points outward on a fixed scale, so a clean drug is a small polygon.</figcaption>
         </figure>
         <div class="tile-text">
           <p class="meta mono"><strong>Circulation 2025</strong> First author</p>
