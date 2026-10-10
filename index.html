@@ -170,6 +170,7 @@ header.nav {
 .tile figcaption { color: var(--muted); font-size: 0.82rem; margin-top: 6px; line-height: 1.4; }
 .tile .meta { color: var(--muted); margin: 0 0 6px; }
 .tile .meta strong { color: var(--accent-ink); font-weight: bold; margin-right: 6px; }
+.ongoing { color: #8a4a1f; font-weight: bold; }
 .tile h3 { font-size: 1.15rem; line-height: 1.25; margin-bottom: 0.6rem; }
 .tile p { font-size: 0.96rem; }
 .tile .links { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.93rem; }
@@ -463,41 +464,6 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
     <h2>Selected work</h2>
     <p class="lede">Published projects and work in progress. Figures open full size when clicked.</p>
 
-    <article class="tile tile-band">
-      <div class="tile-text">
-        <p class="meta mono"><strong>Kinase LLM</strong> Ongoing</p>
-        <h3>An LLM research assistant for kinase inhibitor discovery</h3>
-        <p>A locally hosted Qwen model answers kinase drug discovery questions from a human kinase knowledge graph. The graph joins the human kinome tree, measured binding from ChEMBL and BindingDB, profiling panels, structures, clinical evidence, trials, patents and literature.</p>
-        <p>The model acts as a Principal Scientist. It plans each question, sends it to specialist roles that each have their own tools, checks their evidence and writes an answer whose numbered citations open the source rows.</p>
-        <p>The next stage adds Enamine REAL space and multi-parameter optimization to propose new, selective kinase inhibitors that can actually be made.</p>
-        <p class="tools mono">Qwen, Ollama, Kuzu, FastAPI, RDKit, ChEMBL, BindingDB, KLIFS, Enamine REAL</p>
-      </div>
-      <figure class="arch" aria-label="Architecture of the kinase research assistant">
-        <div class="arch-flow">
-          <div class="arch-box"><span class="arch-k">Input</span><strong>A research question</strong></div>
-          <span class="arch-arrow" aria-hidden="true"></span>
-          <div class="arch-box arch-main"><span class="arch-k">Plans and reviews</span><strong>Principal Scientist</strong><span>Qwen, hosted locally. Chooses specialists, checks their evidence, writes the answer</span></div>
-          <span class="arch-arrow" aria-hidden="true"></span>
-          <div class="arch-box"><span class="arch-k">Output</span><strong>Answer</strong><span>Numbered citations open the source rows</span></div>
-        </div>
-        <ul class="arch-roles">
-          <li><strong>Systems Biologist</strong>expression, pathways, disease genetics</li>
-          <li><strong>Medicinal Chemist</strong>measured binding and selectivity</li>
-          <li><strong>Clinical Scientist</strong>resistance, clinical evidence, trials</li>
-          <li><strong>Structural Biologist</strong>PDB and KinCore structures</li>
-          <li><strong>Computational Chemist</strong>properties and tautomers</li>
-          <li><strong>PubMed Scholar</strong>reviews and recent papers</li>
-          <li><strong>Patent Analyst</strong>patents and applicants</li>
-          <li><strong>ML Scientist</strong>predicted kinome profiles</li>
-        </ul>
-        <div class="arch-data">
-          <div><strong>Human kinase knowledge graph</strong><span>Kinome tree, ChEMBL, BindingDB, profiling panels, CIViC, HPA expression, pathways, PubMed, trials and patents</span></div>
-          <div><strong>Local structure mirror</strong><span>PDB coordinates, KLIFS pocket maps, KinCore labels, AlphaFold2 models</span></div>
-          <div><strong>Design space</strong><span>Enamine REAL building blocks and multi-parameter optimization</span></div>
-        </div>
-        <figcaption>How a question moves through the assistant. Each specialist only answers from its own tools.</figcaption>
-      </figure>
-    </article>
 
     <div class="tiles">
       <div class="tile-col">
@@ -525,7 +491,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <figcaption>Example meta-analysis for one candidate gene. Gene and study names are withheld while the work is in progress.</figcaption>
         </figure>
         <div class="tile-text">
-          <p class="meta mono"><strong>AI-driven fibrosis drug discovery</strong> Ongoing</p>
+          <p class="meta mono"><strong>AI-driven fibrosis drug discovery</strong> <span class="ongoing">Ongoing</span></p>
           <h3>A human pan-fibrosis atlas for targets and drugs</h3>
           <p>Fibrosis drives organ failure in the lung, liver, kidney, skin, heart, gut and pancreas. I am analysing public human RNA-seq datasets organ by organ and pooling effect sizes across studies, to find the program the organs share and the protein targets behind it.</p>
           <p>LINCS perturbation signatures and other approaches then rank drugs that reverse the fibrotic signature. Rankings will be benchmarked on known antifibrotics such as nintedanib and pirfenidone before they are trusted.</p>
@@ -559,7 +525,7 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           <figcaption>Seven organoids in one field, each segmented, coloured by calcium level and traced on the right. Shown at half speed.</figcaption>
         </figure>
         <div class="tile-text">
-          <p class="meta mono"><strong>iPSC-CM data analysis</strong> Ongoing</p>
+          <p class="meta mono"><strong>iPSC-CM data analysis</strong> <span class="ongoing">Ongoing</span></p>
           <h3>Calcium imaging analysis for iPSC cardiomyocytes</h3>
           <p>A Python pipeline for calcium optical imaging of iPSC-derived cardiomyocyte organoids and monolayers in 96-well plates. It segments each organoid, extracts its calcium transient, and measures beat rate, amplitude, transient duration (CaTD50, CaTD80, CaTD90), upstroke and decay kinetics, beat-to-beat variability and synchrony.</p>
           <p>Drug responses are normalised to vehicle wells, so arrhythmia and line-to-line differences show up per plate. It reads two microscope formats, including 100 fps recordings with light-source flicker removed, and an interactive plate explorer and Streamlit app let biologists review every well.</p>
@@ -604,9 +570,64 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
       </article>
       </div>
     </div>
+
       <article class="tile tile-slim">
         <div class="tile-text">
-          <p class="meta mono"><strong>Greenstone Biosciences</strong> Ongoing</p>
+          <p class="meta mono"><strong>Stem Cell Research 2026</strong> Co-author</p>
+          <h3>Whole-genome QC for patient-derived iPSC lines</h3>
+          <p>Before anyone builds a disease model on a new patient iPSC line, the line has to be shown to be the right donor and genomically intact. I built and run the genome analysis for the Stanford Cardiovascular Institute iPSC biobank: it confirms sample identity, checks sequencing quality, infers genetic ancestry, annotates pathogenic variants, and screens for copy number changes the cells picked up in culture.</p>
+          <p>That QC supports the lab's published iPSC line reports, including lines from Fabry disease patients carrying <i class="gene">GLA</i> mutations, from patients with thoracic aortic aneurysm carrying <i class="gene">ACTA2</i> mutations, and from hereditary hemorrhagic telangiectasia patients carrying <i class="gene">ACVRL1</i> mutations.</p>
+          <div class="links">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13618801/">Fabry disease lines</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12767169/"><i class="gene">ACTA2</i> aneurysm lines</a>
+            <a href="https://doi.org/10.1016/j.scr.2026.104095"><i class="gene">ACVRL1</i> telangiectasia lines</a>
+          </div>
+        </div>
+        <figure class="fig-wide">
+          <a href="figures/wgs-cnv-karyotype.jpg"><img src="figures/wgs-cnv-karyotype.jpg" width="2448" height="594" loading="lazy" alt="Genome-wide copy number plot for one iPSC line. Log R ratio in 1 megabase bins across chromosomes 1 to 22, X and Y, sitting in a flat band with no large deviations, above a chromosome ideogram."></a>
+          <figcaption>Copy number across the genome for one iPSC line, in 1 Mb bins. A flat band means no large changes acquired in culture, and the X and Y pattern confirms the donor's sex matches the record. Example output from the pipeline, with sample identifiers removed.</figcaption>
+        </figure>
+      </article>
+
+    <article class="tile tile-band">
+      <div class="tile-text">
+        <p class="meta mono"><strong>Kinase LLM</strong> <span class="ongoing">Ongoing</span></p>
+        <h3>An LLM research assistant for kinase inhibitor discovery</h3>
+        <p>A locally hosted Qwen model answers kinase drug discovery questions from a human kinase knowledge graph. The graph joins the human kinome tree, measured binding from ChEMBL and BindingDB, profiling panels, structures, clinical evidence, trials, patents and literature.</p>
+        <p>The model acts as a Principal Scientist. It plans each question, sends it to specialist roles that each have their own tools, checks their evidence and writes an answer whose numbered citations open the source rows.</p>
+        <p>The next stage adds Enamine REAL space and multi-parameter optimization to propose new, selective kinase inhibitors that can actually be made.</p>
+        <p class="tools mono">Qwen, Ollama, Kuzu, FastAPI, RDKit, ChEMBL, BindingDB, KLIFS, Enamine REAL</p>
+      </div>
+      <figure class="arch" aria-label="Architecture of the kinase research assistant">
+        <div class="arch-flow">
+          <div class="arch-box"><span class="arch-k">Input</span><strong>A research question</strong></div>
+          <span class="arch-arrow" aria-hidden="true"></span>
+          <div class="arch-box arch-main"><span class="arch-k">Plans and reviews</span><strong>Principal Scientist</strong><span>Qwen, hosted locally. Chooses specialists, checks their evidence, writes the answer</span></div>
+          <span class="arch-arrow" aria-hidden="true"></span>
+          <div class="arch-box"><span class="arch-k">Output</span><strong>Answer</strong><span>Numbered citations open the source rows</span></div>
+        </div>
+        <ul class="arch-roles">
+          <li><strong>Systems Biologist</strong>expression, pathways, disease genetics</li>
+          <li><strong>Medicinal Chemist</strong>measured binding and selectivity</li>
+          <li><strong>Clinical Scientist</strong>resistance, clinical evidence, trials</li>
+          <li><strong>Structural Biologist</strong>PDB and KinCore structures</li>
+          <li><strong>Computational Chemist</strong>properties and tautomers</li>
+          <li><strong>PubMed Scholar</strong>reviews and recent papers</li>
+          <li><strong>Patent Analyst</strong>patents and applicants</li>
+          <li><strong>ML Scientist</strong>predicted kinome profiles</li>
+        </ul>
+        <div class="arch-data">
+          <div><strong>Human kinase knowledge graph</strong><span>Kinome tree, ChEMBL, BindingDB, profiling panels, CIViC, HPA expression, pathways, PubMed, trials and patents</span></div>
+          <div><strong>Local structure mirror</strong><span>PDB coordinates, KLIFS pocket maps, KinCore labels, AlphaFold2 models</span></div>
+          <div><strong>Design space</strong><span>Enamine REAL building blocks and multi-parameter optimization</span></div>
+        </div>
+        <figcaption>How a question moves through the assistant. Each specialist only answers from its own tools.</figcaption>
+      </figure>
+    </article>
+
+      <article class="tile tile-slim">
+        <div class="tile-text">
+          <p class="meta mono"><strong>Greenstone Biosciences</strong> <span class="ongoing">Ongoing</span></p>
           <h3>Synthesizable design under ADMET constraints</h3>
           <p>A closed-loop chemistry workflow. SyntheMol proposes molecules that can be made from Enamine REAL building blocks with reaction-aware rules, so every candidate has a synthesis route. Boltz-2 predicts the complex and its binding affinity, molecular dynamics checks whether that complex holds together, and QSAR and ADMET models score potency, BBB permeability and hERG liability.</p>
           <p>Multi-parameter optimization ranks what survives all of it. Medicinal chemists and external CRO partners then make and test the top candidates, and those results retrain the models before the next round. The aim is safe, active, synthesizable candidates for inflammatory and fibrotic diseases.</p>
@@ -646,24 +667,6 @@ footer { padding: 24px 0 32px; color: var(--muted); font-size: 0.9rem; backgroun
           </ol>
           <p class="pipe-loop"><strong>Active learning</strong> Experimental results retrain the models before the next round. Candidates that stay safe and active advance for inflammatory and fibrotic diseases.</p>
           <figcaption>One round of the design loop. Each round starts from what the last round learned.</figcaption>
-        </figure>
-      </article>
-
-      <article class="tile tile-slim">
-        <div class="tile-text">
-          <p class="meta mono"><strong>Stem Cell Research 2026</strong> Co-author</p>
-          <h3>Whole-genome QC for patient-derived iPSC lines</h3>
-          <p>Before anyone builds a disease model on a new patient iPSC line, the line has to be shown to be the right donor and genomically intact. I built and run the genome analysis for the Stanford Cardiovascular Institute iPSC biobank: it confirms sample identity, checks sequencing quality, infers genetic ancestry, annotates pathogenic variants, and screens for copy number changes the cells picked up in culture.</p>
-          <p>That QC supports the lab's published iPSC line reports, including lines from Fabry disease patients carrying <i class="gene">GLA</i> mutations, from patients with thoracic aortic aneurysm carrying <i class="gene">ACTA2</i> mutations, and from hereditary hemorrhagic telangiectasia patients carrying <i class="gene">ACVRL1</i> mutations.</p>
-          <div class="links">
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13618801/">Fabry disease lines</a>
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12767169/"><i class="gene">ACTA2</i> aneurysm lines</a>
-            <a href="https://doi.org/10.1016/j.scr.2026.104095"><i class="gene">ACVRL1</i> telangiectasia lines</a>
-          </div>
-        </div>
-        <figure class="fig-wide">
-          <a href="figures/wgs-cnv-karyotype.jpg"><img src="figures/wgs-cnv-karyotype.jpg" width="2448" height="594" loading="lazy" alt="Genome-wide copy number plot for one iPSC line. Log R ratio in 1 megabase bins across chromosomes 1 to 22, X and Y, sitting in a flat band with no large deviations, above a chromosome ideogram."></a>
-          <figcaption>Copy number across the genome for one iPSC line, in 1 Mb bins. A flat band means no large changes acquired in culture, and the X and Y pattern confirms the donor's sex matches the record. Example output from the pipeline, with sample identifiers removed.</figcaption>
         </figure>
       </article>
   </div>
